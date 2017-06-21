@@ -21,14 +21,6 @@ class NavHelper {
         
     }
     
-    enum NavBarType {
-        case leftArrowLight
-        case leftArrowDark
-        case leftWithTitle
-        case leftWithTitleLight
-        case menu
-    }
-    
     static func configureNavBar(on currentView: UIViewController, leftButtonAction: String){
         
         let leftButton = UIButton.init(type: .custom)
@@ -56,6 +48,16 @@ class NavHelper {
         rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         let rightbarButton = UIBarButtonItem(customView: rightButton)
         currentView.navigationItem.rightBarButtonItem = rightbarButton
+        currentView.navigationController?.isNavigationBarHidden = false
+    }
+    
+    static func configureBackNav(on currentView: UIViewController, leftButtonAction: String){
+        let leftButton = UIButton.init(type: .custom)
+        leftButton.setImage(UIImage.init(icon: .linearIcons(.arrowLeft), size: CGSize(width: 30, height: 30), textColor: .flatWhite()), for: UIControlState.normal)
+        leftButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        leftButton.addTarget(currentView, action: Selector(leftButtonAction), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: leftButton)
+        currentView.navigationItem.leftBarButtonItem = barButton
         currentView.navigationController?.isNavigationBarHidden = false
     }
 }
