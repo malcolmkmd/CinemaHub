@@ -34,23 +34,28 @@ class NavHelper {
         let leftButton = UIButton.init(type: .custom)
         let rightButton = UIButton.init(type: .custom)
         
-        let CinemaTitleview = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 40))
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 40))
+        let CinemaTitleview = UIView(frame: CGRect(x: 0, y: 0, width: 150, height: 50))
+        let label = UILabel(frame: CGRect(x: 0, y: 11, width: 150, height: 30))
         label.textAlignment = .center
         
-        leftButton.setImage(UIImage.init(icon: .dripicon(.arrowThinLeft), size: CGSize(width: 35, height: 35), textColor:.flatNavyBlue()), for: UIControlState.normal)
-        leftButton.setImage(UIImage.init(icon: .dripicon(.arrowThinLeft), size: CGSize(width: 35, height: 35), textColor:.flatNavyBlue()), for: UIControlState.normal)
-        let grayStyle = StringStyle(.color(UIColor("4B4F63")))
-        let grayBoldStyle = StringStyle(.color(UIColor("4B4F63")),.font(UIFont(name: "Futura-Bold", size: 17)!))
-        let vopStyle = StringStyle(
-            .xmlRules([
-                .style("gray", grayStyle),
-                .style("grayBold", grayBoldStyle)
-                ])
+        leftButton.setImage(UIImage.init(icon: .dripicon(.menu), size: CGSize(width: 30, height: 30), textColor: .flatWhite()), for: UIControlState.normal)
+        rightButton.setImage(UIImage.init(icon: .fontAwesome(.user), size: CGSize(width: 30, height: 30), textColor: .flatWhite()), for: UIControlState.normal)
+        let whiteBoldStyle = StringStyle(
+            .font(UIFont(name: "Baskerville-BoldItalic", size: 25)!),
+            .color(.white)
         )
-        label.attributedText = "<grayBold>CinemaHub</grayBold>".styled(with: vopStyle)
+        
+        label.attributedText = "CinemaHub".styled(with: whiteBoldStyle)
         CinemaTitleview.addSubview(label)
         currentView.navigationItem.titleView = CinemaTitleview
-        currentView.navigationController?.isNavigationBarHidden = true
+        
+        leftButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        let barButton = UIBarButtonItem(customView: leftButton)
+        currentView.navigationItem.leftBarButtonItem = barButton
+        
+        rightButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        let rightbarButton = UIBarButtonItem(customView: rightButton)
+        currentView.navigationItem.rightBarButtonItem = rightbarButton
+        currentView.navigationController?.isNavigationBarHidden = false
     }
 }
