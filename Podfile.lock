@@ -1,0 +1,49 @@
+PODS:
+  - BonMot (4.3.1)
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - HCSStarRatingView (1.5)
+  - Hero (1.0.0)
+  - MobilePlayer (1.2.0)
+  - Pastel (0.3.0)
+  - SideMenu (2.3.2)
+  - SwiftIcons (1.5.1)
+
+DEPENDENCIES:
+  - BonMot
+  - ChameleonFramework
+  - HCSStarRatingView (~> 1.5)
+  - Hero (from `https://github.com/lkzhao/Hero`)
+  - MobilePlayer
+  - Pastel
+  - SideMenu
+  - SwiftIcons (from `https://github.com/ranesr/SwiftIcons`)
+
+EXTERNAL SOURCES:
+  Hero:
+    :git: https://github.com/lkzhao/Hero
+  SwiftIcons:
+    :git: https://github.com/ranesr/SwiftIcons
+
+CHECKOUT OPTIONS:
+  Hero:
+    :commit: c157a1b83e3bd3c0e73e30d90fd915812f3b0c8e
+    :git: https://github.com/lkzhao/Hero
+  SwiftIcons:
+    :commit: b5cf5dd42c3d81638980ccd1224a6cc1eb07b5d3
+    :git: https://github.com/ranesr/SwiftIcons
+
+SPEC CHECKSUMS:
+  BonMot: 043bb5a8834cc6d74e9d624742272b92385e0a27
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
+  Hero: d66fdf20c7c8a33c03ff05512cead11b62f8221d
+  MobilePlayer: '069b13482499f14c25b6ce53f63a91e17975b073'
+  Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
+  SideMenu: 3fa07dd05d4bade2b6f9889fb1877e312e1ba319
+  SwiftIcons: b20641adce6b71fcb2e72389b4b5f2e87252df99
+
+PODFILE CHECKSUM: fbb3bece758f3e612604965ecfa23ae30765ad9d
+
+COCOAPODS: 1.2.1

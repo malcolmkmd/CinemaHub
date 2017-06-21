@@ -58,7 +58,7 @@ class MainViewController: UIViewController {
         searchBorderView.layer.borderColor = UIColor.clear.cgColor
         searchBorderView.layer.borderWidth = 1
         searchBorderView.layer.cornerRadius = 14
-        searchBorderView.layer.shadowRadius = 3
+        searchBorderView.layer.shadowRadius = 2
         searchBorderView.layer.shadowOpacity = 0.4
         searchBorderView.layer.shadowOffset = CGSize(width: 1, height: 2)
         searchIcon.image  = UIImage.init(icon: .ionicons(.iosSearchStrong), size: CGSize(width: 30, height: 30), textColor: .flatWhite())
@@ -107,13 +107,18 @@ class MainViewController: UIViewController {
         case .opened:
             showAllTopBtn.setTitle("SEE ALL", for: .normal)
             self.stackView.removeArrangedSubview(self.topHalf)
-            UIView.animate(withDuration: 2, animations: {
+            
+            UIView.animate(withDuration: 0.3, animations: {
                 self.bottomHalf.isHidden = false
                 self.stackView.addArrangedSubview(self.topHalf)
                 self.stackView.addArrangedSubview(self.bottomHalf)
                 self.toplayout.scrollDirection = .horizontal
                 self.searchBorderView.isHidden = true
+                
+                self.setupCVC()
             })
+            
+            self.topCVC.setNeedsDisplay()
             state = .closed
             break
         case .closed:

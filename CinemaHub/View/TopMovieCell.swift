@@ -12,7 +12,7 @@ class TopMovieCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.clipsToBounds = false 
     }
 
 }

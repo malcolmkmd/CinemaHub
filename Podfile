@@ -11,6 +11,7 @@ target 'CinemaHub' do
   pod 'Hero' , :git => 'https://github.com/lkzhao/Hero'
   pod 'SwiftIcons', :git => 'https://github.com/ranesr/SwiftIcons'
   pod 'HCSStarRatingView', '~> 1.5'
+  pod 'MobilePlayer'
   pod 'SideMenu'
   pod 'Pastel'
 end
