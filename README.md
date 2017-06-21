@@ -1,6 +1,6 @@
 # CinemaHub
 
-Swift implementation of CinemaHub 
+Swift implementation of CinemaHub.
 
 <img src="CinemaHub/Resources/preview.jpg" width="525"/>
 
