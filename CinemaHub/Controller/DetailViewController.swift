@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var videoView: UIView!
     
     var movie: Movie!
+    @IBOutlet weak var tabbarPager: UIView!
     var player: BMPlayer!
     
     override func viewDidLoad() {
