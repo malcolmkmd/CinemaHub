@@ -13,7 +13,6 @@ PODS:
   - HCSStarRatingView (1.5)
   - Hero (1.0.0)
   - NVActivityIndicatorView (3.6.1)
-  - Pastel (0.3.0)
   - SnapKit (3.2.0)
   - SwiftIcons (1.5.1)
   - XLPagerTabStrip (7.0.0)
@@ -24,7 +23,6 @@ DEPENDENCIES:
   - ChameleonFramework
   - HCSStarRatingView (~> 1.5)
   - Hero (from `https://github.com/lkzhao/Hero`)
-  - Pastel
   - SwiftIcons (from `https://github.com/ranesr/SwiftIcons`)
   - XLPagerTabStrip (~> 7.0)
 
@@ -49,11 +47,10 @@ SPEC CHECKSUMS:
   HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
   Hero: d66fdf20c7c8a33c03ff05512cead11b62f8221d
   NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
-  Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftIcons: b20641adce6b71fcb2e72389b4b5f2e87252df99
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: 6b98cc68ae41482d793a2b6b3e61c8f6ca8c0719
+PODFILE CHECKSUM: 8ac1c627953b81cbe593b4b72cf8c22f0c5c36fc
 
 COCOAPODS: 1.2.1

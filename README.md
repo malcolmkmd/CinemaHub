@@ -5,7 +5,7 @@ Swift 4 CinemaHub
 
 <img src="CinemaHub/Resources/preview.jpg" width="525"/>
 
-design by: dsamivai@gmail.com on upLabs , src: https://ios.uplabs.com/posts/exploration-cinehub-app-ui
+design by: dsamivai@gmail.com on upLabs, src: https://ios.uplabs.com/posts/exploration-cinehub-app-ui
 
 _Concepts used:_
 - REST JSON API parsing with MOYA
@@ -23,7 +23,6 @@ Libraries Utilized
 ----------------------------------------------
 - Moya
 - Chameleon
-- Pastel
 - XLPagerTabStrip
 - HCSStarRatingView
 - SwiftIcons
@@ -32,7 +31,9 @@ Libraries Utilized
 - BMPlayer
 
 ## TO-DOs
-- [ ] Main movie view
-- [ ] Detail movie view
-- [ ] Tabs for each view in Detail movie view
+- [x] Main movie view
+- [x] Detail movie view
+- [x ] Tabs for each view in Detail movie view
 - [ ] Setup Moya Provider
+- [ ] Model JSON to views
+- [ ] Unit Tests

@@ -46,44 +46,39 @@
                                 <rect key="frame" x="0.0" y="140" width="200" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Black Panther" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBF-gu-CCS">
-                                        <rect key="frame" x="4" y="4" width="188" height="26"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="26" id="85u-Lh-7VI"/>
-                                        </constraints>
+                                        <rect key="frame" x="4" y="4" width="200" height="20.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.39607843139999999" alpha="0.75840111300000002" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="w35-N9-TeS">
-                                        <rect key="frame" x="4" y="30" width="192" height="18"/>
+                                        <rect key="frame" x="4" y="28.5" width="200" height="18"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qV6-Qz-HlY">
-                                                <rect key="frame" x="0.0" y="0.0" width="96" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qV6-Qz-HlY">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <color key="textColor" red="0.42655369640000002" green="0.475846082" blue="0.4802647531" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phM-Oa-usI">
-                                                <rect key="frame" x="96" y="0.0" width="96" height="18"/>
-                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                <rect key="frame" x="100" y="0.0" width="100" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <color key="textColor" red="0.42655369640000002" green="0.475846082" blue="0.4802647531" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="18" id="lJz-Dr-arY"/>
+                                            <constraint firstAttribute="height" constant="18" id="Zcx-G8-qW4"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="cBF-gu-CCS" firstAttribute="top" secondItem="oNG-3O-brg" secondAttribute="top" constant="4" id="LIE-jK-2O7"/>
-                                    <constraint firstAttribute="trailing" secondItem="cBF-gu-CCS" secondAttribute="trailing" constant="8" id="ZJt-j8-9vM"/>
-                                    <constraint firstItem="w35-N9-TeS" firstAttribute="leading" secondItem="oNG-3O-brg" secondAttribute="leading" constant="4" id="bNm-Y5-9Fe"/>
-                                    <constraint firstItem="cBF-gu-CCS" firstAttribute="leading" secondItem="oNG-3O-brg" secondAttribute="leading" constant="4" id="eA8-Ws-Yad"/>
-                                    <constraint firstAttribute="trailing" secondItem="w35-N9-TeS" secondAttribute="trailing" constant="4" id="n6W-p4-BJX"/>
-                                    <constraint firstAttribute="bottom" secondItem="w35-N9-TeS" secondAttribute="bottom" constant="12" id="ouh-L1-Wwc"/>
-                                    <constraint firstItem="w35-N9-TeS" firstAttribute="top" secondItem="cBF-gu-CCS" secondAttribute="bottom" id="vNS-Ua-Kfw"/>
+                                    <constraint firstItem="cBF-gu-CCS" firstAttribute="leading" secondItem="oNG-3O-brg" secondAttribute="leading" constant="4" id="PmC-xH-oiS"/>
+                                    <constraint firstItem="w35-N9-TeS" firstAttribute="width" secondItem="cBF-gu-CCS" secondAttribute="width" id="c3I-Us-KME"/>
+                                    <constraint firstItem="w35-N9-TeS" firstAttribute="top" secondItem="cBF-gu-CCS" secondAttribute="bottom" constant="4" id="if8-xh-Z6F"/>
+                                    <constraint firstItem="cBF-gu-CCS" firstAttribute="top" secondItem="oNG-3O-brg" secondAttribute="top" constant="4" id="qd9-uI-UOR"/>
+                                    <constraint firstItem="w35-N9-TeS" firstAttribute="leading" secondItem="oNG-3O-brg" secondAttribute="leading" constant="4" id="va3-On-fcN"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -91,6 +86,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="oNG-3O-brg" secondAttribute="bottom" id="CJM-jE-SpY"/>
                             <constraint firstItem="oNG-3O-brg" firstAttribute="leading" secondItem="jBs-KY-O8e" secondAttribute="leading" id="IMY-4J-Hen"/>
+                            <constraint firstItem="cBF-gu-CCS" firstAttribute="width" secondItem="SZO-lX-qWg" secondAttribute="width" id="OzR-dk-rbK"/>
                             <constraint firstItem="oNG-3O-brg" firstAttribute="top" secondItem="aWE-Qw-KO1" secondAttribute="bottom" id="Tyo-0q-nk1"/>
                             <constraint firstAttribute="trailing" secondItem="oNG-3O-brg" secondAttribute="trailing" id="ZuP-MN-kB1"/>
                             <constraint firstAttribute="trailing" secondItem="aWE-Qw-KO1" secondAttribute="trailing" id="nj0-R6-5Cc"/>

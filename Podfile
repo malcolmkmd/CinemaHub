@@ -13,5 +13,4 @@ target 'CinemaHub' do
   pod 'HCSStarRatingView', '~> 1.5'
   pod 'XLPagerTabStrip', '~> 7.0'
   pod 'BMPlayer'
-  pod 'Pastel'
 end

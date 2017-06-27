@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="castCell" rowHeight="74" id="KGk-i7-Jjw" customClass="CastCell" customModule="CinemaHub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfq-wY-nMH">
+                        <rect key="frame" x="74" y="8" width="57" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="Kjl-3l-Wwg"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="Seg-U9-TvP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <color key="textColor" red="0.1334631741" green="0.1823148429" blue="0.25190103050000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackPanther" translatesAutoresizingMaskIntoConstraints="NO" id="pXq-II-cUK">
+                        <rect key="frame" x="8" y="-1" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="2Ld-vH-tJX"/>
+                            <constraint firstAttribute="height" constant="50" id="n8q-4X-ii7"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pXq-II-cUK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Qqw-yG-Llh"/>
+                    <constraint firstAttribute="bottom" secondItem="pXq-II-cUK" secondAttribute="bottom" constant="10.5" id="YOS-JJ-j2l"/>
+                    <constraint firstItem="qfq-wY-nMH" firstAttribute="leading" secondItem="pXq-II-cUK" secondAttribute="trailing" constant="16" id="cjV-Vp-RAo"/>
+                    <constraint firstItem="qfq-wY-nMH" firstAttribute="centerY" secondItem="pXq-II-cUK" secondAttribute="centerY" id="rcN-7g-EDO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLbl" destination="qfq-wY-nMH" id="CC2-qR-y4G"/>
+                <outlet property="profileImg" destination="pXq-II-cUK" id="hCg-S8-QEa"/>
+            </connections>
+            <point key="canvasLocation" x="27" y="64"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="blackPanther" width="570" height="807"/>
+    </resources>
+</document>
