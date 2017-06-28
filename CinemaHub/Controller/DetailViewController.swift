@@ -8,15 +8,23 @@
 
 import UIKit
 import BMPlayer
+import HCSStarRatingView
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var tabbarPagerView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var releaseLabel: UILabel!
+    @IBOutlet weak var rating: HCSStarRatingView!
     
     let detailTabs = CustomTabBar()
     
-    var movie: Movie?
+    var movie: Movie? {
+        didSet {
+            self.updateUI()
+        }
+    }
     var player: BMPlayer!
     
     override func viewDidLoad() {
@@ -27,7 +35,7 @@ class DetailViewController: UIViewController {
         BMPlayerConf.topBarShowInCase = .always
         let videoURL = URL(string: "http://player.vimeo.com/external/85569724.sd.mp4?s=43df5df0d733011263687d20a47557e4")!
         let videoTitle = "Star Wars: Episode VII3"
-        let video = BMPlayerResource(url: videoURL, name: videoTitle, cover: URL(string: "https://cdn.pixabay.com/photo/2017/05/18/21/54/tower-bridge-2324875_960_720.jpg"), subtitle: nil)
+        let video = BMPlayerResource(url: videoURL, name: videoTitle, cover: URL(string: "https://image.tmdb.org/t/p/w500\(movie!.posterPath)"), subtitle: nil)
         player = BMPlayer(customControlView: BMPlayerCustomControlView())
         player.setVideo(resource: video)
 
@@ -39,6 +47,13 @@ class DetailViewController: UIViewController {
         
         detailTabs.view.frame = tabbarPagerView.bounds
         tabbarPagerView.addSubview(detailTabs.view)
+    }
+    
+    func updateUI(){
+        detailTabs.overview = movie?.overview
+        titleLabel.text = movie?.title
+        releaseLabel.text = "Release: \(movie?.releaseDate ?? "")"
+        rating.value = CGFloat((movie?.rating)!)
     }
 }
 

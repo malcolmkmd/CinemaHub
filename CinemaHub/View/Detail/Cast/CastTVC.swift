@@ -48,6 +48,6 @@ class CastTVC: UITableViewController{
 
 extension CastTVC: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Cast")
+        return IndicatorInfo(title: "Recommendations")
     }
 }

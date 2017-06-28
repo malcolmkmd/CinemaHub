@@ -16,12 +16,13 @@ struct Movie  {
     var title: String
     var releaseDate: String
     var rating: Int
+    var overview: String
     
     init(fromJson json: JSON!){
         posterPath = json["poster_path"].stringValue
         title = json["title"].stringValue
         releaseDate = json["release_date"].stringValue
         rating = Int(json["vote_average"].doubleValue) / 2
-        
+        overview = json["overview"].stringValue
     }
 }

@@ -33,11 +33,13 @@ class MainViewController: UIViewController {
     
     var cellWidth: CGFloat!
     var state: Showing = .closed
+    var isSearching: Bool = false 
     var bottomlayout: UICollectionViewFlowLayout!
     var toplayout: UICollectionViewFlowLayout!
     
     var currentMovies: [Movie]!
     var topRatedMovies: [Movie]!
+    var filteredMovies = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,10 +125,14 @@ class MainViewController: UIViewController {
             state = .opened
             break
         }
+        isSearching = false 
+        self.view.endEditing(true)
+        self.resignFirstResponder()
     }
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == topCVC {
             let cell = topCVC.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath) as? TopMovieCell
@@ -134,7 +140,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell!
         }else if collectionView == bottomCVC {
             let cell = bottomCVC.dequeueReusableCell(withReuseIdentifier: "bottomCell", for: indexPath) as? BottomMovieCell
-            cell?.movie = currentMovies[indexPath.row]
+            if isSearching {
+                cell?.movie = filteredMovies[indexPath.row]
+            }else {
+                cell?.movie = currentMovies[indexPath.row]
+            }
             return cell!
         }else{
             return UICollectionViewCell()
@@ -151,33 +161,65 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             if currentMovies == nil {
                 return 0
             }
-            return currentMovies.count
-            
+            if isSearching {
+                return filteredMovies.count
+            }else{
+                return currentMovies.count
+            }
         }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
-//            detailVC.movie = Movie()
-            self.navigationController?.pushViewController(detailVC, animated: true)
+        if collectionView == topCVC {
+            if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
+                detailVC.movie = topRatedMovies[indexPath.row]
+                self.navigationController?.pushViewController(detailVC, animated: true)
+            }
+        }else if collectionView == bottomCVC {
+            if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
+                detailVC.movie = topRatedMovies[indexPath.row]
+                self.navigationController?.pushViewController(detailVC, animated: true)
+            }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == topCVC {
+        if collectionView == bottomCVC {
             switch state {
             case .closed:
-                return CGSize(width: 160, height: self.topCVC.frame.height)
+                return CGSize(width: 160, height: self.bottomCVC.frame.height)
             case .opened:
-                return CGSize(width: cellWidth, height: self.topCVC.frame.height)
+                return CGSize(width: cellWidth, height: 210)
             }
         }else {
-            return CGSize(width: cellWidth, height: self.bottomCVC.frame.height)
+            return CGSize(width: cellWidth, height: self.topCVC.frame.height)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
+    }
+}
+
+extension MainViewController: UITextFieldDelegate, UISearchBarDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text == nil || textField.text == "" {
+            isSearching = false
+            bottomCVC.reloadData()
+            view.endEditing(true)
+            view.resignFirstResponder()
+        }else {
+            isSearching = true
+            let query = textField.text?.trimmingCharacters(in: .whitespaces)
+            filteredMovies = currentMovies.filter { $0.title.localizedCaseInsensitiveContains(query!) }
+            bottomCVC.reloadData()
+            
+        }
+        
+        self.resignFirstResponder()
+        self.view.endEditing(true)
+        return true
     }
 }

@@ -9,10 +9,17 @@
 import UIKit
 
 class DescriptionCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var overviewLabel: UILabel!
+    
+    var overview: String? {
+    didSet {
+        self.updateUI()
+        }
+    }
+    
+    func updateUI(){
+        overviewLabel.text = overview
     }
     
 }

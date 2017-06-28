@@ -10,15 +10,19 @@ import UIKit
 import XLPagerTabStrip
 
 class DetailTVC: UITableViewController {
-
+    
+    var overview: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "DescriptionCell", bundle: Bundle.main), forCellReuseIdentifier: "descriptionCell")
         tableView.separatorStyle = .none
         tableView.bounces = false
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 200
+        tableView.estimatedRowHeight = 80
     }
+    
+    
     
     // MARK: - Table view data source
 
@@ -32,6 +36,7 @@ class DetailTVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionCell") as? DescriptionCell {
+            cell.overview = overview
             return cell
         }else {
             return UITableViewCell()

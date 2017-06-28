@@ -13,14 +13,19 @@ class CustomTabBar: ButtonBarPagerTabStripViewController {
     
     let selectedColor = UIColor(hexString: "424065")!
     
+    let tabOne = DetailTVC()
+    let tabTwo = CastTVC()
+    
+    var overview: String!
+    
     override func viewDidLoad() {
         style()
-        
+        tabOne.overview = overview
         super.viewDidLoad()
     }
     
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        return [DetailTVC(), CastTVC()]
+        return [tabOne, tabTwo]
     }
     
     func style(){
@@ -36,6 +41,5 @@ class CustomTabBar: ButtonBarPagerTabStripViewController {
             oldCell?.label.textColor = .lightGray
             newCell?.label.textColor = self?.selectedColor
         }
-        
     }
 }

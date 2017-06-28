@@ -27,12 +27,15 @@ Libraries Utilized
 - Hero
 - BonMot
 - BMPlayer
+- SwiftyJSON
+- KingFisher 
 
 ## TO-DOs
 - [x] Main movie view
 - [x] Detail movie view
 - [x] Tabs for each view in Detail movie view
-- [ ] Setup Moya Provider
+- [x] Setup Moya Provider
 - [ ] Model JSON to views
+- [ ] Error Handling
 - [ ] Unit Tests
 
