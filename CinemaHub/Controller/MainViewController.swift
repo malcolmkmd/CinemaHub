@@ -36,6 +36,9 @@ class MainViewController: UIViewController {
     var bottomlayout: UICollectionViewFlowLayout!
     var toplayout: UICollectionViewFlowLayout!
     
+    var currentMovies: [Movie]!
+    var topRatedMovies: [Movie]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         state = .closed
@@ -43,13 +46,22 @@ class MainViewController: UIViewController {
         toplayout = topCVC.collectionViewLayout as? UICollectionViewFlowLayout
         cellWidth = (UIScreen.main.bounds.width/2) - 16
         showAllTopBtn.setIcon(icon: .linearIcons(.chevronDown), color: UIColor.flatRed(), forState: .normal)
-  
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        getMovies()
         setupNavBar()
         setupSearch()
         setupCVC()
+    }
+    
+    func getMovies(){
+        API.getTopRated(page: 1, completion: { movies in
+            self.topRatedMovies = movies
+            self.topCVC.reloadData()
+        })
+        
+        API.getNewMovies(page: 1) { movies in
+            self.currentMovies = movies
+            self.bottomCVC.reloadData()
+        }
     }
     
     func setupNavBar(){
@@ -117,11 +129,13 @@ class MainViewController: UIViewController {
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == topCVC {
-            let cell = topCVC.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath)
-            return cell
+            let cell = topCVC.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath) as? TopMovieCell
+            cell?.movie = topRatedMovies[indexPath.row]
+            return cell!
         }else if collectionView == bottomCVC {
-            let cell = bottomCVC.dequeueReusableCell(withReuseIdentifier: "bottomCell", for: indexPath)
-            return cell
+            let cell = bottomCVC.dequeueReusableCell(withReuseIdentifier: "bottomCell", for: indexPath) as? BottomMovieCell
+            cell?.movie = currentMovies[indexPath.row]
+            return cell!
         }else{
             return UICollectionViewCell()
         }
@@ -129,17 +143,23 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == topCVC {
-            return 1
+            if topRatedMovies == nil {
+                return 0
+            }
+            return topRatedMovies.count
         }else if collectionView == bottomCVC {
-            return 5
-        }else{
-            return 0 
+            if currentMovies == nil {
+                return 0
+            }
+            return currentMovies.count
+            
         }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
-            detailVC.movie = Movie(name: "Black Panthers")
+//            detailVC.movie = Movie()
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }

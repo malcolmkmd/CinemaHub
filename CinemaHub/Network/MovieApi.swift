@@ -23,7 +23,7 @@ extension MovieApi: TargetType {
     var path: String {
         switch self {
         case .topRated:
-            return "top_rated"
+            return "popular"
         case .newMovies:
             return "now_playing"
         }

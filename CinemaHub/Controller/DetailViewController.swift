@@ -16,7 +16,7 @@ class DetailViewController: UIViewController {
     
     let detailTabs = CustomTabBar()
     
-    var movie: Movie!
+    var movie: Movie?
     var player: BMPlayer!
     
     override func viewDidLoad() {

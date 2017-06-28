@@ -14,4 +14,6 @@ target 'CinemaHub' do
   pod 'XLPagerTabStrip', '~> 7.0'
   pod 'BMPlayer'
   pod 'Moya'
+  pod 'SwiftyJSON'
+  pod 'Kingfisher', '~> 3.0'
 end

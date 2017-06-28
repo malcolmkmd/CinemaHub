@@ -30,7 +30,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWE-Qw-KO1">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="140"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackPanther" translatesAutoresizingMaskIntoConstraints="NO" id="SZO-lX-qWg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placer" translatesAutoresizingMaskIntoConstraints="NO" id="SZO-lX-qWg">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="140"/>
                                     </imageView>
                                 </subviews>
@@ -46,22 +46,22 @@
                                 <rect key="frame" x="0.0" y="140" width="200" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Black Panther" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBF-gu-CCS">
-                                        <rect key="frame" x="4" y="4" width="200" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <rect key="frame" x="4" y="4" width="200" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.39607843139999999" alpha="0.75840111300000002" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="w35-N9-TeS">
-                                        <rect key="frame" x="4" y="28.5" width="200" height="18"/>
+                                        <rect key="frame" x="4" y="26" width="192" height="18"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qV6-Qz-HlY">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qV6-Qz-HlY">
+                                                <rect key="frame" x="0.0" y="0.0" width="96" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <color key="textColor" red="0.42655369640000002" green="0.475846082" blue="0.4802647531" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phM-Oa-usI">
-                                                <rect key="frame" x="100" y="0.0" width="100" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27/09/2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phM-Oa-usI">
+                                                <rect key="frame" x="96" y="0.0" width="96" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                 <color key="textColor" red="0.42655369640000002" green="0.475846082" blue="0.4802647531" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -75,9 +75,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="cBF-gu-CCS" firstAttribute="leading" secondItem="oNG-3O-brg" secondAttribute="leading" constant="4" id="PmC-xH-oiS"/>
-                                    <constraint firstItem="w35-N9-TeS" firstAttribute="width" secondItem="cBF-gu-CCS" secondAttribute="width" id="c3I-Us-KME"/>
                                     <constraint firstItem="w35-N9-TeS" firstAttribute="top" secondItem="cBF-gu-CCS" secondAttribute="bottom" constant="4" id="if8-xh-Z6F"/>
                                     <constraint firstItem="cBF-gu-CCS" firstAttribute="top" secondItem="oNG-3O-brg" secondAttribute="top" constant="4" id="qd9-uI-UOR"/>
+                                    <constraint firstAttribute="trailing" secondItem="w35-N9-TeS" secondAttribute="trailing" constant="4" id="ulx-qu-aSV"/>
                                     <constraint firstItem="w35-N9-TeS" firstAttribute="leading" secondItem="oNG-3O-brg" secondAttribute="leading" constant="4" id="va3-On-fcN"/>
                                 </constraints>
                             </view>
@@ -104,10 +104,15 @@
                 <constraint firstAttribute="trailing" secondItem="jBs-KY-O8e" secondAttribute="trailing" id="seb-uv-LVc"/>
             </constraints>
             <size key="customSize" width="199" height="200"/>
+            <connections>
+                <outlet property="dateLabel" destination="phM-Oa-usI" id="oto-6O-LvV"/>
+                <outlet property="posterImage" destination="SZO-lX-qWg" id="h9z-cb-ZkB"/>
+                <outlet property="titleLabel" destination="cBF-gu-CCS" id="vdu-Q2-uXC"/>
+            </connections>
             <point key="canvasLocation" x="-34" y="-20"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="blackPanther" width="570" height="807"/>
+        <image name="placer" width="1920" height="1080"/>
     </resources>
 </document>
