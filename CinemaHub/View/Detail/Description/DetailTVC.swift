@@ -20,6 +20,7 @@ class DetailTVC: UITableViewController {
         tableView.bounces = false
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 80
+        tableView.allowsSelection = false 
     }
     
     

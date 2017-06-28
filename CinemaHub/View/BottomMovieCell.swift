@@ -22,15 +22,10 @@ class BottomMovieCell: UICollectionViewCell {
     }
     
     func updateUI(){
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie!.posterPath)")!
+        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie!.posterPath ?? "")")!
         let resource = ImageResource(downloadURL: url, cacheKey: movie?.title)
         posterImage.kf.setImage(with: resource, placeholder: #imageLiteral(resourceName: "placer"), options: [.transition(.fade(0.3))])
         titleLabel.text = movie?.title
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd"
-        let date = dateFormatter.date(from: (movie?.releaseDate)!)!
-        dateFormatter.dateFormat = "MMM, dd"
-        dateLabel.text = dateFormatter.string(from: date)
+        dateLabel.text = movie?.releaseDate
     }
 }

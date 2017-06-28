@@ -15,6 +15,19 @@ class API {
     static let apiKey = "7a312711d0d45c9da658b9206f3851dd"
     static let provider = MoyaProvider<MovieApi>()
     
+    static func getMovie(with id: Int, completion: @escaping (Movie)->()){
+        provider.request(.movie(id: id)){ result in
+            switch result {
+            case let .success(response):
+                let json =  JSON(response.data)
+                var movie = Movie(fromJson: json)
+                completion(movie)
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
+    
     static func getTopRated(page: Int, completion: @escaping ([Movie])->()){
         provider.request(.topRated(page: page, key: apiKey)) { result in
             switch result {

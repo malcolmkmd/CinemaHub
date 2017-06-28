@@ -13,6 +13,7 @@ import SwiftyJSON
 struct Movie  {
     var posterPath: String
     var videoPath: String?
+    var backdrop: String
     var title: String
     var releaseDate: String
     var rating: Int
@@ -21,8 +22,15 @@ struct Movie  {
     init(fromJson json: JSON!){
         posterPath = json["poster_path"].stringValue
         title = json["title"].stringValue
-        releaseDate = json["release_date"].stringValue
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        let date = dateFormatter.date(from: (json["release_date"].stringValue))!
+        dateFormatter.dateFormat = "MMM, dd"
+        releaseDate = dateFormatter.string(from: date)
+        
         rating = Int(json["vote_average"].doubleValue) / 2
         overview = json["overview"].stringValue
+        backdrop = json["backdrop_path"].stringValue
     }
 }

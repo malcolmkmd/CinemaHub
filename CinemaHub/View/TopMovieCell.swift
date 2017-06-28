@@ -31,11 +31,6 @@ class TopMovieCell: UICollectionViewCell {
         titleLabel.text = movie?.title
         
         ratingView.value = CGFloat((movie?.rating)!)
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd"
-        let date = dateFormatter.date(from: (movie?.releaseDate)!)!
-        dateFormatter.dateFormat = "MMM, dd"
-        dateLabel.text = dateFormatter.string(from: date)
+        dateLabel.text = movie?.releaseDate
     }
 }

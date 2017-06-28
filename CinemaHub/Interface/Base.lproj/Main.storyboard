@@ -285,28 +285,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrp-LA-Hhv">
                                 <rect key="frame" x="0.0" y="200" width="414" height="75"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hacksaw Ridge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AId-Nb-cDz">
-                                        <rect key="frame" x="8" y="0.0" width="168.66666666666666" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hacksaw Ridge" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AId-Nb-cDz">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="260" id="lE5-OY-9lX"/>
-                                            <constraint firstAttribute="height" constant="30" id="snQ-cD-FZB"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="lE5-OY-9lX"/>
+                                            <constraint firstAttribute="height" constant="50" id="snQ-cD-FZB"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                         <color key="textColor" red="0.1334631741" green="0.1823148429" blue="0.25190103050000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release: 21/09/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMx-jN-ARN">
-                                        <rect key="frame" x="8" y="36" width="152.33333333333334" height="20"/>
+                                        <rect key="frame" x="8" y="56" width="136.66666666666666" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="260" id="FpP-oK-vLg"/>
                                             <constraint firstAttribute="height" constant="20" id="H2d-NH-d3k"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="textColor" red="0.42655369640000002" green="0.475846082" blue="0.4802647531" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAc-yp-2n6" customClass="HCSStarRatingView">
-                                        <rect key="frame" x="326" y="27.666666666666657" width="80" height="20"/>
+                                        <rect key="frame" x="326" y="56" width="80" height="20"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.25882352939999997" green="0.25098039220000001" blue="0.39607843139999999" alpha="0.75840111300000002" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -315,25 +315,26 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8l9-aE-feC">
-                                        <rect key="frame" x="264" y="27" width="54" height="20"/>
+                                        <rect key="frame" x="264" y="56" width="54" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="YMD-Rz-H2b"/>
                                             <constraint firstAttribute="width" constant="54" id="uNe-6r-bqf"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <color key="textColor" red="0.42655369640000002" green="0.475846082" blue="0.4802647531" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="8l9-aE-feC" firstAttribute="centerY" secondItem="yrp-LA-Hhv" secondAttribute="centerY" id="7Wz-SD-XtS"/>
                                     <constraint firstItem="AId-Nb-cDz" firstAttribute="top" secondItem="yrp-LA-Hhv" secondAttribute="top" id="8vj-jQ-C9e"/>
+                                    <constraint firstItem="8l9-aE-feC" firstAttribute="centerY" secondItem="cMx-jN-ARN" secondAttribute="centerY" id="B1G-tZ-otE"/>
+                                    <constraint firstItem="IAc-yp-2n6" firstAttribute="centerY" secondItem="8l9-aE-feC" secondAttribute="centerY" id="Lwr-0l-IcD"/>
                                     <constraint firstItem="cMx-jN-ARN" firstAttribute="top" secondItem="AId-Nb-cDz" secondAttribute="bottom" constant="6" id="QdT-gu-NmU"/>
-                                    <constraint firstItem="IAc-yp-2n6" firstAttribute="centerY" secondItem="yrp-LA-Hhv" secondAttribute="centerY" id="af4-bs-gvy"/>
                                     <constraint firstAttribute="height" constant="75" id="b16-SG-8l1"/>
                                     <constraint firstItem="AId-Nb-cDz" firstAttribute="leading" secondItem="yrp-LA-Hhv" secondAttribute="leading" constant="8" id="mg3-Fi-nFt"/>
                                     <constraint firstItem="cMx-jN-ARN" firstAttribute="leading" secondItem="yrp-LA-Hhv" secondAttribute="leading" constant="8" id="qQd-eU-43p"/>
+                                    <constraint firstAttribute="trailing" secondItem="AId-Nb-cDz" secondAttribute="trailing" constant="8" id="rgH-SQ-vLQ"/>
                                     <constraint firstItem="IAc-yp-2n6" firstAttribute="leading" secondItem="8l9-aE-feC" secondAttribute="trailing" constant="8" id="x1g-TM-m88"/>
                                     <constraint firstAttribute="trailing" secondItem="IAc-yp-2n6" secondAttribute="trailing" constant="8" id="xHK-jb-L4S"/>
                                 </constraints>

@@ -6,7 +6,7 @@
 design by: dsamivai@gmail.com on upLabs, src: https://ios.uplabs.com/posts/exploration-cinehub-app-ui
 
 _Concepts used:_
-- REST JSON API parsing with MOYA
+- MOYA REST JSON API 
 - Dynamic collectionView (swicthing from horizontal to vertical on the fly)
 - Custom collectionView cells
 - Tableview with custom cell
@@ -15,6 +15,7 @@ _Concepts used:_
 - StackViews
 - MVC-N architecture (N for network)
 - Video player
+- Image cache-ing with KingFisher
 
 
 Libraries Utilized
@@ -38,4 +39,5 @@ Libraries Utilized
 - [ ] Model JSON to views
 - [ ] Error Handling
 - [ ] Unit Tests
+- [ ] Refactoring 
 

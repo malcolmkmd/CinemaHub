@@ -24,7 +24,7 @@
                             <constraint firstAttribute="height" constant="32" id="Kjl-3l-Wwg"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="57" id="Seg-U9-TvP"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                         <color key="textColor" red="0.1334631741" green="0.1823148429" blue="0.25190103050000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
