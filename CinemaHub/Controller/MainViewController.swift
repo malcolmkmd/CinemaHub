@@ -9,6 +9,7 @@
 import UIKit
 import Hero
 import SwiftIcons
+import Moya
 
 enum Showing {
     case opened
@@ -42,6 +43,7 @@ class MainViewController: UIViewController {
         toplayout = topCVC.collectionViewLayout as? UICollectionViewFlowLayout
         cellWidth = (UIScreen.main.bounds.width/2) - 16
         showAllTopBtn.setIcon(icon: .linearIcons(.chevronDown), color: UIColor.flatRed(), forState: .normal)
+  
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -141,15 +143,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
-    
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if state == .opened{
-//            UIView.animate(withDuration: 0.3, animations: {
-//                self.showButtonHeight.constant = 0
-//            })
-//        }
-//
-//    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == topCVC {

@@ -1,7 +1,5 @@
 # CinemaHub
-
-Swift 4 CinemaHub
-------------------------
+------------------------------------------------------
 
 <img src="CinemaHub/Resources/preview.jpg" width="525"/>
 
@@ -33,7 +31,8 @@ Libraries Utilized
 ## TO-DOs
 - [x] Main movie view
 - [x] Detail movie view
-- [x ] Tabs for each view in Detail movie view
+- [x] Tabs for each view in Detail movie view
 - [ ] Setup Moya Provider
 - [ ] Model JSON to views
 - [ ] Unit Tests
+

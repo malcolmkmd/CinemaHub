@@ -31,7 +31,7 @@ class DetailViewController: UIViewController {
         player = BMPlayer(customControlView: BMPlayerCustomControlView())
         player.setVideo(resource: video)
 
-        player.frame = videoView.bounds
+        player.frame = videoView.frame
         videoView.addSubview(player)
         player.backBlock = { _ in
             self.navigationController?.popViewController(animated: true)
