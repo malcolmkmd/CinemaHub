@@ -10,7 +10,6 @@ import Foundation
 import Moya
 
 enum MovieApi {
-    case movie(id:Int, key: String)
     case reco(id:Int, key: String)
     case topRated(page:Int, key: String)
     case newMovies(page:Int, key: String)
@@ -24,8 +23,6 @@ extension MovieApi: TargetType {
     
     var path: String {
         switch self {
-        case .movie:
-            return "movie"
         case .reco(let id, _):
             return "\(id)/recommendations"
         case .topRated:
@@ -37,15 +34,13 @@ extension MovieApi: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .movie, .reco, .topRated, .newMovies:
+        case .reco, .topRated, .newMovies:
             return .get
         }
     }
     
     var parameters: [String : Any]? {
         switch self {
-        case .movie(let id, let key):
-            return ["movie_id": id, "api_key": key]
         case .reco(_ , let key):
             return ["api_key": key]
         case .topRated(let page, let key), .newMovies(let page, let key):
@@ -55,7 +50,7 @@ extension MovieApi: TargetType {
     
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .movie, .reco, .topRated, .newMovies:
+        case .reco, .topRated, .newMovies:
             return URLEncoding.queryString
         }
     }
@@ -67,10 +62,8 @@ extension MovieApi: TargetType {
     
     var task: Task {
         switch self {
-        case .movie, .reco, .topRated, .newMovies:
+        case .reco, .topRated, .newMovies:
             return .request
         }
     }
-    
-    
 }

@@ -12,6 +12,7 @@ class DescriptionCell: UITableViewCell {
     
     @IBOutlet weak var overviewLabel: UILabel!
     
+    
     var overview: String? {
     didSet {
         self.updateUI()
@@ -23,3 +24,6 @@ class DescriptionCell: UITableViewCell {
     }
     
 }
+
+
+

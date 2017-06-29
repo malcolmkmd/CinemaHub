@@ -13,7 +13,7 @@ class RecomendationsTVC: UITableViewController {
     
     var movieID: Int!
     var movies: [Movie]!
-    
+    var delegate: PushDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,7 @@ class RecomendationsTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
             detailVC.movie = movies[indexPath.row]
-            self.parent?.navigationController?.pushViewController(detailVC, animated: true)
+            self.delegate!.push(viewController: detailVC)
         }
     }
     
@@ -71,4 +71,8 @@ extension RecomendationsTVC: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Recommended")
     }
+}
+
+protocol PushDelegate {
+    func push(viewController: UIViewController)
 }

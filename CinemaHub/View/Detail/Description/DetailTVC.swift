@@ -12,6 +12,7 @@ import XLPagerTabStrip
 class DetailTVC: UITableViewController {
     
     var overview: String!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,4 +51,6 @@ extension DetailTVC: IndicatorInfoProvider {
         return IndicatorInfo(title: "Description")
     }
 }
+
+
 

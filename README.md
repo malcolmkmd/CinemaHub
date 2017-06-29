@@ -29,15 +29,16 @@ Libraries Utilized
 - BonMot
 - BMPlayer
 - SwiftyJSON
-- KingFisher 
+- KingFisher
+- Snapkit
 
 ## TO-DOs
 - [x] Main movie view
 - [x] Detail movie view
 - [x] Tabs for each view in Detail movie view
 - [x] Setup Moya Provider
-- [ ] Model JSON to views
+- [x] Model JSON to views
 - [ ] Error Handling
 - [ ] Unit Tests
-- [ ] Refactoring 
+- [ ] Refactoring (Removie all '!' yeah we like being super safe)
 

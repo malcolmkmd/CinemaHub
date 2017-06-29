@@ -15,6 +15,7 @@ class CustomTabBar: ButtonBarPagerTabStripViewController {
     
     let tabOne = DetailTVC()
     let tabTwo = RecomendationsTVC()
+    var pushDelegate: PushDelegate?
     
     var overview: String!
     var movieID: Int!
@@ -23,10 +24,8 @@ class CustomTabBar: ButtonBarPagerTabStripViewController {
         style()
         tabOne.overview = overview
         tabTwo.movieID = movieID
-
         super.viewDidLoad()
-        
-        self.navigationController?.popViewController(animated: true)
+        tabTwo.delegate = pushDelegate
     }
     
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
@@ -48,3 +47,4 @@ class CustomTabBar: ButtonBarPagerTabStripViewController {
         }
     }
 }
+

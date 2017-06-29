@@ -52,6 +52,7 @@ class DetailViewController: UIViewController {
         }
         
         detailTabs.view.frame = tabbarPagerView.bounds
+        
         tabbarPagerView.addSubview(detailTabs.view)
         
         titleLabel.text = movie?.title
@@ -61,7 +62,8 @@ class DetailViewController: UIViewController {
     
     func updateUI(){
         detailTabs.overview = movie?.overview
-        detailTabs.movieID = movie?.id 
+        detailTabs.movieID = movie?.id
+        detailTabs.pushDelegate = self
     }
 }
 
@@ -83,5 +85,11 @@ class BMPlayerCustomControlView: BMPlayerControlView {
         }) { (_) in
             self.autoFadeOutControlViewWithAnimation()
         }
+    }
+}
+
+extension DetailViewController: PushDelegate{
+    func push(viewController: UIViewController) {
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
