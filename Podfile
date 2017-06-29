@@ -15,5 +15,6 @@ target 'CinemaHub' do
   pod 'BMPlayer'
   pod 'Moya'
   pod 'SwiftyJSON'
+  pod 'SnapKit', '~> 3.2.0'
   pod 'Kingfisher', '~> 3.0'
 end

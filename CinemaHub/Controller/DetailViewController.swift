@@ -39,8 +39,15 @@ class DetailViewController: UIViewController {
         player = BMPlayer(customControlView: BMPlayerCustomControlView())
         player.setVideo(resource: video)
         
-        player.frame = videoView.frame
         videoView.addSubview(player)
+
+        player.snp.makeConstraints { (make) in
+            make.top.equalTo(videoView)
+            make.left.right.equalTo(videoView)
+            // Note here, the aspect ratio 16:9 priority is lower than 1000 on the line, because the 4S iPhone aspect ratio is not 16:9
+            make.height.equalTo(player.snp.width).multipliedBy(9.0/16.0).priority(750)
+        }
+        
         player.backBlock = { _ in
             self.navigationController?.popViewController(animated: true)
         }

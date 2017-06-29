@@ -247,6 +247,7 @@
                         <outlet property="headerHeightConstraint" destination="MGb-wy-6oy" id="8Wa-Nr-QEj"/>
                         <outlet property="searchBorderView" destination="Qjs-Sw-GaP" id="sQs-St-woO"/>
                         <outlet property="searchIcon" destination="hQM-b8-bxf" id="3mc-lf-LGQ"/>
+                        <outlet property="searchTextField" destination="hdg-Vg-5Fq" id="LCC-CY-xxV"/>
                         <outlet property="showAllTopBtn" destination="zS1-XS-TI0" id="30L-uT-J9m"/>
                         <outlet property="showButtonHeight" destination="pWW-a4-nSd" id="ycM-Dw-Bw5"/>
                         <outlet property="stackView" destination="BfI-jv-ekA" id="kIr-en-czJ"/>

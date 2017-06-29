@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var bottomHalf: UIView!
     @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var showButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var searchTextField: UITextField!
     
     var cellWidth: CGFloat!
     var state: Showing = .closed
@@ -125,7 +126,9 @@ class MainViewController: UIViewController {
             state = .opened
             break
         }
-        isSearching = false 
+        isSearching = false
+        searchTextField.text = ""
+        bottomCVC.reloadData()
         self.view.endEditing(true)
         self.resignFirstResponder()
     }

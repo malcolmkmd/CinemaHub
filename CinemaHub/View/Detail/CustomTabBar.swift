@@ -11,7 +11,7 @@ import XLPagerTabStrip
 
 class CustomTabBar: ButtonBarPagerTabStripViewController {
     
-    let selectedColor = UIColor(hexString: "424065")!
+    let selectedColor = UIColor.flatGreenColorDark()
     
     let tabOne = DetailTVC()
     let tabTwo = CastTVC()
@@ -30,7 +30,7 @@ class CustomTabBar: ButtonBarPagerTabStripViewController {
     
     func style(){
         settings.style.selectedBarHeight = 1
-        settings.style.selectedBarBackgroundColor = selectedColor
+        settings.style.selectedBarBackgroundColor = selectedColor!
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarMinimumLineSpacing = 0

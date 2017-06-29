@@ -34,6 +34,7 @@ DEPENDENCIES:
   - Hero (from `https://github.com/lkzhao/Hero`)
   - Kingfisher (~> 3.0)
   - Moya
+  - SnapKit (~> 3.2.0)
   - SwiftIcons (from `https://github.com/ranesr/SwiftIcons`)
   - SwiftyJSON
   - XLPagerTabStrip (~> 7.0)
@@ -68,6 +69,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: 4879f7445094692ba5529be4953fdeca23528874
+PODFILE CHECKSUM: bc33e2298acba4eb89d8fc89fbc67f80ac7e0439
 
 COCOAPODS: 1.2.1
