@@ -16,5 +16,8 @@ target 'CinemaHub' do
   pod 'Moya'
   pod 'SwiftyJSON'
   pod 'SnapKit', '~> 3.2.0'
+  pod 'YoutubeSourceParserKit' , :git => 'https://github.com/lennet/YoutubeSourceParserKit', :branch => 'master'
   pod 'Kingfisher', '~> 3.0'
+  
+  
 end

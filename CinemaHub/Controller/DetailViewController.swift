@@ -9,6 +9,7 @@
 import UIKit
 import BMPlayer
 import HCSStarRatingView
+import YoutubeSourceParserKit
 
 class DetailViewController: UIViewController {
     
@@ -33,22 +34,36 @@ class DetailViewController: UIViewController {
         // Setup video player
         BMPlayerConf.shouldAutoPlay = false
         BMPlayerConf.topBarShowInCase = .always
-        let videoURL = URL(string: "http://player.vimeo.com/external/85569724.sd.mp4?s=43df5df0d733011263687d20a47557e4")!
+        
+        
+        var key = ""
+        var videoURL = URL(string: "https://www.youtube.com/watch?")!
         let videoTitle = movie?.title
-        let video = BMPlayerResource(url: videoURL, name: videoTitle!, cover: URL(string: "https://image.tmdb.org/t/p/w500\(movie!.backdrop)"), subtitle: nil)
-        player = BMPlayer(customControlView: BMPlayerCustomControlView())
-        player.setVideo(resource: video)
-        
-        videoView.addSubview(player)
-
-        player.snp.makeConstraints { (make) in
-            make.top.equalTo(videoView)
-            make.left.right.equalTo(videoView)
-            make.height.equalTo(player.snp.width).multipliedBy(9.0/16.0).priority(750)
-        }
-        
-        player.backBlock = { _ in
-            self.navigationController?.popViewController(animated: true)
+        API.getVideo(forMovieWith: (movie?.id)!) { url in
+            key = url!
+            videoURL = URL(string: "https://www.youtube.com/watch?v=\(key)")!
+            Youtube.h264videosWithYoutubeURL(videoURL) { videoInfo, error in
+                if let videoURLString = videoInfo?["url"] as? String {
+                    videoURL =  URL(string: videoURLString)!
+                    let video = BMPlayerResource(url: videoURL, name: videoTitle!, cover: URL(string: "https://image.tmdb.org/t/p/w500\(self.movie!.backdrop)"), subtitle: nil)
+                    self.player = BMPlayer(customControlView: BMPlayerCustomControlView())
+                    self.player.setVideo(resource: video)
+                    
+                    DispatchQueue.main.async {
+                         self.videoView.addSubview(self.player)
+                        
+                        self.player.snp.makeConstraints { (make) in
+                            make.top.equalTo(self.videoView)
+                            make.left.right.equalTo(self.videoView)
+                            make.height.equalTo(self.player.snp.width).multipliedBy(9.0/16.0).priority(750)
+                        }
+                        
+                        self.player.backBlock = { _ in
+                            self.navigationController?.popViewController(animated: true)
+                        }
+                    }
+                }
+            }
         }
         
         detailTabs.view.frame = tabbarPagerView.bounds

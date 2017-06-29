@@ -10,9 +10,10 @@ import Foundation
 import Moya
 
 enum MovieApi {
-    case reco(id:Int, key: String)
-    case topRated(page:Int, key: String)
-    case newMovies(page:Int, key: String)
+    case reco(id:Int)
+    case topRated(page:Int)
+    case newMovies(page:Int)
+    case video(id:Int)
 }
 
 extension MovieApi: TargetType {
@@ -23,46 +24,43 @@ extension MovieApi: TargetType {
     
     var path: String {
         switch self {
-        case .reco(let id, _):
+        case .reco(let id):
             return "\(id)/recommendations"
         case .topRated:
             return "popular"
         case .newMovies:
             return "now_playing"
+        case .video(let id):
+            return "\(id)/videos"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .reco, .topRated, .newMovies:
+        case .reco, .topRated, .newMovies, .video:
             return .get
         }
     }
     
     var parameters: [String : Any]? {
         switch self {
-        case .reco(_ , let key):
-            return ["api_key": key]
-        case .topRated(let page, let key), .newMovies(let page, let key):
-            return ["page": page, "api_key": key]
+        case .reco, .video:
+            return ["api_key": API.apiKey]
+        case .topRated(let page), .newMovies(let page):
+            return ["page": page, "api_key": API.apiKey]
         }
     }
     
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .reco, .topRated, .newMovies:
+        case .reco, .topRated, .newMovies, .video:
             return URLEncoding.queryString
         }
     }
     
-    // TO-DO: add sample data for tests
-    var sampleData: Data {
-        return Data()
-    }
-    
     var task: Task {
         switch self {
-        case .reco, .topRated, .newMovies:
+        case .reco, .topRated, .newMovies, .video:
             return .request
         }
     }

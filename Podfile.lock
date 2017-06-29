@@ -25,6 +25,7 @@ PODS:
   - SwiftIcons (1.5.1)
   - SwiftyJSON (3.1.4)
   - XLPagerTabStrip (7.0.0)
+  - YoutubeSourceParserKit (0.2.4)
 
 DEPENDENCIES:
   - BMPlayer
@@ -38,12 +39,16 @@ DEPENDENCIES:
   - SwiftIcons (from `https://github.com/ranesr/SwiftIcons`)
   - SwiftyJSON
   - XLPagerTabStrip (~> 7.0)
+  - YoutubeSourceParserKit (from `https://github.com/lennet/YoutubeSourceParserKit`, branch `master`)
 
 EXTERNAL SOURCES:
   Hero:
     :git: https://github.com/lkzhao/Hero
   SwiftIcons:
     :git: https://github.com/ranesr/SwiftIcons
+  YoutubeSourceParserKit:
+    :branch: master
+    :git: https://github.com/lennet/YoutubeSourceParserKit
 
 CHECKOUT OPTIONS:
   Hero:
@@ -52,6 +57,9 @@ CHECKOUT OPTIONS:
   SwiftIcons:
     :commit: b5cf5dd42c3d81638980ccd1224a6cc1eb07b5d3
     :git: https://github.com/ranesr/SwiftIcons
+  YoutubeSourceParserKit:
+    :commit: 98f3bcf9886c20eefd82249a6cfbb3068ad86b80
+    :git: https://github.com/lennet/YoutubeSourceParserKit
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
@@ -68,7 +76,8 @@ SPEC CHECKSUMS:
   SwiftIcons: b20641adce6b71fcb2e72389b4b5f2e87252df99
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
+  YoutubeSourceParserKit: d1506222a62718ed41f18ab52ebbc1b1d9ecabcc
 
-PODFILE CHECKSUM: bc33e2298acba4eb89d8fc89fbc67f80ac7e0439
+PODFILE CHECKSUM: 48fef29d4e0491c56c117fa82be4048f2861716e
 
 COCOAPODS: 1.2.1

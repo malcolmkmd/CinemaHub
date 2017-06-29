@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav.isHeroEnabled = true
         nav.heroNavigationAnimationType = .zoom
         let mainView = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "MainVC")
+        mainView.view.layer.cornerRadius = 3
         nav.viewControllers = [mainView]
         self.window!.rootViewController = nav
         self.window?.makeKeyAndVisible()

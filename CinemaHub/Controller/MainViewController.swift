@@ -65,6 +65,7 @@ class MainViewController: UIViewController {
             self.currentMovies = movies
             self.bottomCVC.reloadData()
         }
+        
     }
     
     func setupNavBar(){

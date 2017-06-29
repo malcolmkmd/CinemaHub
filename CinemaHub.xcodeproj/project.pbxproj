@@ -28,6 +28,7 @@
 		9DA550241F02441100A15599 /* RecommendationsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA550221F02441100A15599 /* RecommendationsTVC.swift */; };
 		9DA550251F02441100A15599 /* RecommendationsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DA550231F02441100A15599 /* RecommendationsTVC.xib */; };
 		9DA550271F02476B00A15599 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA550261F02476B00A15599 /* CustomTabBar.swift */; };
+		9DC64AA11F0528250039487D /* MockApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC64AA01F0528250039487D /* MockApi.swift */; };
 		9DC839301EFA4BAD0096310B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8392F1EFA4BAD0096310B /* DetailViewController.swift */; };
 		9DC839321EFA4BC10096310B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC839311EFA4BC10096310B /* Movie.swift */; };
 		9DC839341EFA73350096310B /* preview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DC839331EFA73350096310B /* preview.jpg */; };
@@ -59,6 +60,7 @@
 		9DA550221F02441100A15599 /* RecommendationsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsTVC.swift; sourceTree = "<group>"; };
 		9DA550231F02441100A15599 /* RecommendationsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationsTVC.xib; sourceTree = "<group>"; };
 		9DA550261F02476B00A15599 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		9DC64AA01F0528250039487D /* MockApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApi.swift; sourceTree = "<group>"; };
 		9DC8392F1EFA4BAD0096310B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9DC839311EFA4BC10096310B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9DC839331EFA73350096310B /* preview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview.jpg; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				9D9E9CF21F038DBA0096989C /* API.swift */,
 				9D9E9CF01F03868B0096989C /* MovieApi.swift */,
+				9DC64AA01F0528250039487D /* MockApi.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				9DC839301EFA4BAD0096310B /* DetailViewController.swift in Sources */,
 				9D9E9CED1F02A2680096989C /* DescriptionCell.swift in Sources */,
 				9D4444E31EF8111F00A6F733 /* MainViewController.swift in Sources */,
+				9DC64AA11F0528250039487D /* MockApi.swift in Sources */,
 				9D1A57211EF95A2A00995A6D /* BottomMovieCell.swift in Sources */,
 				9D9E9CF11F03868B0096989C /* MovieApi.swift in Sources */,
 				9DA550271F02476B00A15599 /* CustomTabBar.swift in Sources */,
