@@ -14,14 +14,19 @@ class CustomTabBar: ButtonBarPagerTabStripViewController {
     let selectedColor = UIColor.flatGreenColorDark()
     
     let tabOne = DetailTVC()
-    let tabTwo = CastTVC()
+    let tabTwo = RecomendationsTVC()
     
     var overview: String!
+    var movieID: Int!
     
     override func viewDidLoad() {
         style()
         tabOne.overview = overview
+        tabTwo.movieID = movieID
+
         super.viewDidLoad()
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

@@ -11,6 +11,7 @@ import SwiftyJSON
 
 
 struct Movie  {
+    var id:Int!
     var posterPath: String
     var videoPath: String?
     var backdrop: String
@@ -20,6 +21,7 @@ struct Movie  {
     var overview: String
     
     init(fromJson json: JSON!){
+        id = json["id"].intValue
         posterPath = json["poster_path"].stringValue
         title = json["title"].stringValue
         

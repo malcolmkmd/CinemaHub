@@ -13,22 +13,27 @@ import SwiftyJSON
 class API {
     
     static let apiKey = "7a312711d0d45c9da658b9206f3851dd"
-    static let provider = MoyaProvider<MovieApi>()
+    static let provider =  MoyaProvider<MovieApi>() // MoyaProvider<MovieApi>(plugins: [NetworkLoggerPlugin(verbose: true)]) ** for debug
     
-    static func getMovie(with id: Int, completion: @escaping (Movie)->()){
-        provider.request(.movie(id: id)){ result in
+    static func getNewMovies(page: Int, completion: @escaping ([Movie])->()){
+        provider.request(.newMovies(page: page, key: apiKey)) { result in
             switch result {
             case let .success(response):
                 let json =  JSON(response.data)
-                var movie = Movie(fromJson: json)
-                completion(movie)
+                let results = json["results"].arrayValue
+                
+                var movies = [Movie]()
+                for movie in results {
+                    movies.append(Movie(fromJson: movie))
+                }
+                completion(movies)
             case let .failure(error):
                 print(error)
             }
         }
     }
     
-    static func getTopRated(page: Int, completion: @escaping ([Movie])->()){
+    static func getTopRated(page: Int, completion: @escaping ([Movie?])->()){
         provider.request(.topRated(page: page, key: apiKey)) { result in
             switch result {
             case let .success(response):
@@ -48,28 +53,21 @@ class API {
         }
     }
     
-    static func getNewMovies(page: Int, completion: @escaping ([Movie])->()){
-        provider.request(.newMovies(page: page, key: apiKey)) { result in
+    static func getRecommendations(forMovieWith id: Int, completion: @escaping ([Movie]?)->()){
+        provider.request(.reco(id: id, key: apiKey)) { result in
             switch result {
             case let .success(response):
-                let json =  JSON(response.data)
+                let json = JSON(response.data)
                 let results = json["results"].arrayValue
-                
                 var movies = [Movie]()
                 for movie in results {
                     movies.append(Movie(fromJson: movie))
                 }
-                
                 completion(movies)
-                
             case let .failure(error):
                 print(error)
             }
         }
     }
-    
-    
-    
-    
     
 }

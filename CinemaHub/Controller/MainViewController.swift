@@ -57,7 +57,7 @@ class MainViewController: UIViewController {
     
     func getMovies(){
         API.getTopRated(page: 1, completion: { movies in
-            self.topRatedMovies = movies
+            self.topRatedMovies = movies as! [Movie]
             self.topCVC.reloadData()
         })
         
