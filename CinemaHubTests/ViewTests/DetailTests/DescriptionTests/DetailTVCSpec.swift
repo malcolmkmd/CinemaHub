@@ -10,6 +10,7 @@ import Foundation
 import Quick
 import Nimble
 import Mockingjay
+import XLPagerTabStrip
 @testable import CinemaHub
 
 class DetailTVCSpec : QuickSpec {
@@ -19,6 +20,7 @@ class DetailTVCSpec : QuickSpec {
         sut.overview = "the overview"
         test_viewDidLoad(view: sut)
         test_tableViewDelegates(view: sut)
+        test_indicatorInfo(view: sut)
     }
     
     func test_viewDidLoad(view sut: DetailTVC){
@@ -62,6 +64,13 @@ class DetailTVCSpec : QuickSpec {
                     expect(sut.tableView(UITableView(), cellForRowAt: IndexPath(row: 0, section: 0))).to(beAKindOf(UITableViewCell.self))
                 }
             }
+        }
+    }
+    
+    func test_indicatorInfo(view sut: DetailTVC){
+        describe("test indicatorInfo"){
+            let info = sut.indicatorInfo(for: PagerTabStripViewController())
+            expect(info.title).to(equal("Description"))
         }
     }
 }
