@@ -38,6 +38,7 @@ Libraries Utilized
 - [x] Tabs for each view in Detail movie view
 - [x] Setup Moya Provider
 - [x] Model JSON to views
+- [ ] Handle lanscape playing of video
 - [ ] Error Handling
 - [ ] Unit Tests
 - [ ] Refactoring (Removie all '!' yeah we like being super safe)

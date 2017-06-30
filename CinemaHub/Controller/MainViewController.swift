@@ -179,6 +179,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
                 detailVC.movie = topRatedMovies[indexPath.row]
                 self.navigationController?.pushViewController(detailVC, animated: true)
+                
             }
         }else if collectionView == bottomCVC {
             if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {

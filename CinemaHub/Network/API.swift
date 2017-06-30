@@ -9,6 +9,7 @@
 import Foundation
 import Moya
 import SwiftyJSON
+import YoutubeSourceParserKit
 
 class API {
     
@@ -77,7 +78,20 @@ class API {
                 let json = JSON(response.data)
                 let results = json["results"].arrayValue
                 let url = results[0]["key"].stringValue
-                completion(url)
+                guard let videoURL = URL(string: "https://www.youtube.com/watch?v=\(url)") else {return}
+                print("video: \(videoURL)" )
+                Youtube.h264videosWithYoutubeURL(videoURL) { videoInfo, error in
+                    if let videoURLString = videoInfo?["url"] as? String {
+                        completion(videoURLString)
+                    }else{
+                        guard let placeHolderUrl = URL(string: "https://www.youtube.com/watch?v=NpEaa2P7qZI") else {return}
+                        Youtube.h264videosWithYoutubeURL(placeHolderUrl) { videoInfo, error in
+                            if let placeHolderVideoUrl = videoInfo?["url"] as? String {
+                                completion(placeHolderVideoUrl)
+                            }
+                        }
+                    }
+                }
             case let .failure(error):
                 print(error)
             }
