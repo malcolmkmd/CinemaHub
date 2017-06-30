@@ -21,6 +21,7 @@
 		9D4444E51EF8118300A6F733 /* NavHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4444E41EF8118300A6F733 /* NavHelper.swift */; };
 		9D49B0D21F066BF600D9BD50 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D49B0D11F066BF600D9BD50 /* Helper.swift */; };
 		9D557BCA1F0676050017A141 /* Movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D49B0CC1F06683900D9BD50 /* Movie.json */; };
+		9D557BCC1F067C320017A141 /* TopMovieCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D557BCB1F067C320017A141 /* TopMovieCellSpec.swift */; };
 		9D9E9CE71F029A000096989C /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E9CE51F029A000096989C /* RecommendationCell.swift */; };
 		9D9E9CE81F029A000096989C /* RecommendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D9E9CE61F029A000096989C /* RecommendationCell.xib */; };
 		9D9E9CEA1F02A2560096989C /* DetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E9CE91F02A2560096989C /* DetailTVC.swift */; };
@@ -70,6 +71,7 @@
 		9D49B0CC1F06683900D9BD50 /* Movie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie.json; sourceTree = "<group>"; };
 		9D49B0CE1F06694500D9BD50 /* CinemaHubTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CinemaHubTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9D49B0D11F066BF600D9BD50 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9D557BCB1F067C320017A141 /* TopMovieCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovieCellSpec.swift; sourceTree = "<group>"; };
 		9D9E9CE51F029A000096989C /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
 		9D9E9CE61F029A000096989C /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
 		9D9E9CE91F02A2560096989C /* DetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTVC.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 		9DFC4F421F06547B00FFB907 /* ViewTests */ = {
 			isa = PBXGroup;
 			children = (
+				9D557BCB1F067C320017A141 /* TopMovieCellSpec.swift */,
 			);
 			path = ViewTests;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DFC4F4A1F06552100FFB907 /* MovieSpec.swift in Sources */,
+				9D557BCC1F067C320017A141 /* TopMovieCellSpec.swift in Sources */,
 				9D49B0D21F066BF600D9BD50 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
