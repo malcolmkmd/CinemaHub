@@ -42,18 +42,26 @@ class DetailTVCSpec : QuickSpec {
             beforeEach {
                 sut.viewDidLoad()
             }
+            
+            it("should set numberOfSections"){
+                expect(sut.numberOfSections(in: sut.tableView)).to(equal(1))
+            }
+            
+            it("should set numberOfRowsInSection"){
+                expect(sut.tableView(sut.tableView, numberOfRowsInSection: 0)).to(equal(1))
+            }
+            
+            context("descriptionCell"){
+                it("should set cellForRowAt"){
+                    expect(sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))).to(beAKindOf(DescriptionCell.self))
+                }
+            }
+            
+            context("unknown cell"){
+                it("should set cellForRowAt"){
+                    expect(sut.tableView(UITableView(), cellForRowAt: IndexPath(row: 0, section: 0))).to(beAKindOf(UITableViewCell.self))
+                }
+            }
         }
-        
-        it("should set numberOfSections"){
-            expect(sut.numberOfSections(in: sut.tableView)).to(equal(1))
-        }
-        
-        it("should set numberOfRowsInSection"){
-            expect(sut.tableView(sut.tableView, numberOfRowsInSection: 0)).to(equal(1))
-        }
-        it("should set cellForRowAt"){
-            expect(sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0))).to(beAKindOf(DescriptionCell.self))
-        }
-        
     }
 }
