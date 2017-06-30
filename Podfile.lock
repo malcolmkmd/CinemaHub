@@ -14,16 +14,26 @@ PODS:
   - HCSStarRatingView (1.5)
   - Hero (1.0.0)
   - Kingfisher (3.9.1)
+  - Mockingjay (2.0.0):
+    - Mockingjay/Core (= 2.0.0)
+    - Mockingjay/XCTest (= 2.0.0)
+  - Mockingjay/Core (2.0.0):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.0):
+    - Mockingjay/Core
   - Moya (8.0.4):
     - Moya/Core (= 8.0.4)
   - Moya/Core (8.0.4):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - Nimble (6.0.1)
   - NVActivityIndicatorView (3.6.1)
+  - Quick (1.1.0)
   - Result (3.2.2)
   - SnapKit (3.2.0)
   - SwiftIcons (1.5.1)
   - SwiftyJSON (3.1.4)
+  - URITemplate (2.0.1)
   - XLPagerTabStrip (7.0.0)
   - YoutubeSourceParserKit (0.2.4)
 
@@ -34,7 +44,10 @@ DEPENDENCIES:
   - HCSStarRatingView (~> 1.5)
   - Hero (from `https://github.com/lkzhao/Hero`)
   - Kingfisher (~> 3.0)
+  - Mockingjay
   - Moya
+  - Nimble
+  - Quick
   - SnapKit (~> 3.2.0)
   - SwiftIcons (from `https://github.com/ranesr/SwiftIcons`)
   - SwiftyJSON
@@ -69,15 +82,19 @@ SPEC CHECKSUMS:
   HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
   Hero: d66fdf20c7c8a33c03ff05512cead11b62f8221d
   Kingfisher: 6729a0baaa458245bfb8cd5a1296c71c10d6eb6c
+  Mockingjay: 7122a3fc0597aa63438e4cd9b71b7bc8aac05b87
   Moya: a08bc060c7a44eee27447b239ed33a189b641e2b
+  Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
   NVActivityIndicatorView: 9f52a7f84bf5c6a798722c450fe3c198e01c56ed
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   Result: 4edd39003fdccf281d418ee1b006571f70123250
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SwiftIcons: b20641adce6b71fcb2e72389b4b5f2e87252df99
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  URITemplate: 720b8a56a281494d7c2d31ee33183986eaed2c67
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
   YoutubeSourceParserKit: d1506222a62718ed41f18ab52ebbc1b1d9ecabcc
 
-PODFILE CHECKSUM: 48fef29d4e0491c56c117fa82be4048f2861716e
+PODFILE CHECKSUM: b57d371f62ead81957acd3344bd83896003164e0
 
 COCOAPODS: 1.2.1

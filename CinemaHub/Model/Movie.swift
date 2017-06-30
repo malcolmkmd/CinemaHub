@@ -26,7 +26,7 @@ struct Movie  {
         title = json["title"].stringValue
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-mm-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let date = dateFormatter.date(from: (json["release_date"].stringValue))!
         dateFormatter.dateFormat = "MMM, dd"
         releaseDate = dateFormatter.string(from: date)
