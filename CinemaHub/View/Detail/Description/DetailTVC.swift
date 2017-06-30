@@ -40,9 +40,8 @@ class DetailTVC: UITableViewController {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "descriptionCell") as? DescriptionCell {
             cell.overview = overview
             return cell
-        }else {
-            return UITableViewCell()
         }
+        return UITableViewCell()
     }
 }
 
