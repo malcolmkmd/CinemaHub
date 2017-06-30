@@ -32,6 +32,7 @@
 		9DC839301EFA4BAD0096310B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8392F1EFA4BAD0096310B /* DetailViewController.swift */; };
 		9DC839321EFA4BC10096310B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC839311EFA4BC10096310B /* Movie.swift */; };
 		9DC839341EFA73350096310B /* preview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DC839331EFA73350096310B /* preview.jpg */; };
+		9DFC4F321F06491900FFB907 /* BMPlayerCustomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC4F311F06491900FFB907 /* BMPlayerCustomControlView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		9DC8392F1EFA4BAD0096310B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9DC839311EFA4BC10096310B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9DC839331EFA73350096310B /* preview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview.jpg; sourceTree = "<group>"; };
+		9DFC4F311F06491900FFB907 /* BMPlayerCustomControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMPlayerCustomControlView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			children = (
 				9D4444E21EF8111F00A6F733 /* MainViewController.swift */,
 				9DC8392F1EFA4BAD0096310B /* DetailViewController.swift */,
+				9DFC4F311F06491900FFB907 /* BMPlayerCustomControlView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				9DC839321EFA4BC10096310B /* Movie.swift in Sources */,
 				9DA550241F02441100A15599 /* RecommendationsTVC.swift in Sources */,
 				9D1A571D1EF95A1400995A6D /* TopMovieCell.swift in Sources */,
+				9DFC4F321F06491900FFB907 /* BMPlayerCustomControlView.swift in Sources */,
 				9D9E9CEA1F02A2560096989C /* DetailTVC.swift in Sources */,
 				9D9E9CE71F029A000096989C /* RecommendationCell.swift in Sources */,
 				9D4444C81EF8032000A6F733 /* AppDelegate.swift in Sources */,

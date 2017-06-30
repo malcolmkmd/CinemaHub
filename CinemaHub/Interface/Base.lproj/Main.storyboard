@@ -257,7 +257,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455.07246376811599" y="123.09782608695653"/>
+            <point key="canvasLocation" x="196" y="130"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="MgK-rO-Pp6">
@@ -272,10 +272,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0U2-m1-uAK">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                 <subviews>
                                     <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="viI-Zm-z9x">
-                                        <rect key="frame" x="197" y="90" width="20" height="20"/>
+                                        <rect key="frame" x="197" y="115" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Jj3-YX-7wO"/>
                                             <constraint firstAttribute="width" constant="20" id="fv8-O8-jQc"/>
@@ -287,7 +287,7 @@
                                 <constraints>
                                     <constraint firstItem="viI-Zm-z9x" firstAttribute="centerY" secondItem="0U2-m1-uAK" secondAttribute="centerY" id="Aue-UN-YdB"/>
                                     <constraint firstItem="viI-Zm-z9x" firstAttribute="centerX" secondItem="0U2-m1-uAK" secondAttribute="centerX" id="GzC-eq-LCW"/>
-                                    <constraint firstAttribute="height" constant="200" id="Ik0-tC-ZdW"/>
+                                    <constraint firstAttribute="height" constant="250" id="Ik0-tC-ZdW"/>
                                 </constraints>
                                 <variation key="heightClass=compact-widthClass=regular">
                                     <mask key="constraints">
@@ -296,7 +296,7 @@
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrp-LA-Hhv">
-                                <rect key="frame" x="0.0" y="200" width="414" height="75"/>
+                                <rect key="frame" x="0.0" y="250" width="414" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hacksaw Ridge" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AId-Nb-cDz">
                                         <rect key="frame" x="8" y="0.0" width="398" height="50"/>
@@ -353,7 +353,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qv7-sr-ZR7">
-                                <rect key="frame" x="0.0" y="275" width="414" height="461"/>
+                                <rect key="frame" x="0.0" y="325" width="414" height="411"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -397,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MnF-ve-OPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107" y="123"/>
+            <point key="canvasLocation" x="909" y="130"/>
         </scene>
     </scenes>
 </document>

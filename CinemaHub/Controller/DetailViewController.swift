@@ -60,6 +60,8 @@ class DetailViewController: UIViewController {
         guard let videoPath = movie.videoPath else {return}
         guard let videoURL = URL(string: videoPath), let cover = URL(string: "https://image.tmdb.org/t/p/w500\(movie.backdrop)") else {return}
         let video = BMPlayerResource(url: videoURL, name: movie.title, cover: cover, subtitle: nil)
+        let customController = BMPlayerCustomControlView()
+        
         player = BMPlayer(customControlView: BMPlayerCustomControlView())
         player.setVideo(resource: video)
         
@@ -68,9 +70,10 @@ class DetailViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
         
+        
         DispatchQueue.main.async {
             self.videoView.addSubview(self.player)
-//            self.spinner.stopAnimating()
+            self.spinner.stopAnimating()
             self.player.snp.makeConstraints { make in
                 make.top.equalTo(self.videoView)
                 make.left.right.equalTo(self.videoView)
@@ -89,26 +92,9 @@ class DetailViewController: UIViewController {
         super.viewWillDisappear(animated)
         player.pause()
     }
-}
-
-class BMPlayerCustomControlView: BMPlayerControlView {
-    override func controlViewAnimation(isShow: Bool) {
-        self.isMaskShowing = isShow
-        UIView.animate(withDuration: 0.24, animations: {
-            self.topMaskView.snp.remakeConstraints {
-                $0.top.equalTo(self.mainMaskView).offset(isShow ? 0 : -65)
-                $0.left.right.equalTo(self.mainMaskView).offset(-10)
-                $0.height.equalTo(65)
-            }
-            self.bottomMaskView.snp.remakeConstraints {
-                $0.bottom.equalTo(self.mainMaskView).offset(isShow ? 0 : 50)
-                $0.left.right.equalTo(self.mainMaskView).offset(-10)
-                $0.height.equalTo(50)
-            }
-            self.layoutIfNeeded()
-        }) { (_) in
-            self.autoFadeOutControlViewWithAnimation()
-        }
+    
+    deinit {
+        player.prepareToDealloc()
     }
 }
 
