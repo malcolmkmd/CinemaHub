@@ -28,7 +28,7 @@ Libraries Utilized
 - Hero
 - BonMot
 - BMPlayer
-- SwiftyJSON
+- SwiftyJSON ❌ (bye bye SwiftJSON, thanks to Swift4 Codable  👍🏾)
 - KingFisher
 - Snapkit
 

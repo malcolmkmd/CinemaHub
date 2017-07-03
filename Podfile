@@ -14,7 +14,6 @@ target 'CinemaHub' do
   pod 'XLPagerTabStrip', '~> 7.0'
   pod 'BMPlayer'
   pod 'Moya'
-  pod 'SwiftyJSON'
   pod 'SnapKit', '~> 3.2.0'
   pod 'YoutubeSourceParserKit' , :git => 'https://github.com/lennet/YoutubeSourceParserKit', :branch => 'master'
   pod 'Kingfisher', '~> 3.0'
@@ -23,7 +22,6 @@ target 'CinemaHub' do
       pod 'Quick'
       pod 'Nimble'
       pod 'Mockingjay'
-      pod 'SwiftyJSON'
   end
   
   # Disable Code Coverage for Pods projects

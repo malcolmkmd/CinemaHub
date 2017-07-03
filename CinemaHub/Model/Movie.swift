@@ -7,32 +7,40 @@
 //
 
 import Foundation
-import SwiftyJSON
 
-
-struct Movie  {
-    var id:Int!
-    var posterPath: String
-    var videoPath: String?
-    var backdrop: String
-    var title: String
-    var releaseDate: String
-    var rating: Int
-    var overview: String
+struct APIResults: Decodable {
+    let page: Int
+    let numResults: Int
+    let numPages: Int
+    let movies: [Movie]
     
-    init(fromJson json: JSON!){
-        id = json["id"].intValue
-        posterPath = json["poster_path"].stringValue
-        title = json["title"].stringValue
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: (json["release_date"].stringValue))!
-        dateFormatter.dateFormat = "MMM, dd"
-        releaseDate = dateFormatter.string(from: date)
-        
-        rating = Int(json["vote_average"].doubleValue) / 2
-        overview = json["overview"].stringValue
-        backdrop = json["backdrop_path"].stringValue
+    private enum CodingKeys: String, CodingKey {
+        case page, numResults = "total_results", numPages = "total_pages", movies  = "results"
     }
+}
+
+struct Movie: Decodable  {
+    let id:Int!
+    let posterPath: String
+    var videoPath: String?
+    let backdrop: String
+    let title: String
+    let releaseDate: String
+    let rating: Double
+    let overview: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, posterPath = "poster_path", videoPath, backdrop = "backdrop_path", title, releaseDate = "release_date", rating = "vote_average", overview
+    }
+}
+
+struct VideoResults: Decodable {
+    let details: [VideoKey]
+    private enum CodingKeys: String, CodingKey {
+        case details = "results"
+    }
+}
+
+struct VideoKey: Decodable {
+    let key: String 
 }
