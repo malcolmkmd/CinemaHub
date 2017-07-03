@@ -58,7 +58,7 @@ class RecomendationsTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
             detailVC.movie = movies[indexPath.row]
-            self.delegate!.push(viewController: detailVC)
+            self.delegate?.push(viewController: detailVC)
         }
     }
     

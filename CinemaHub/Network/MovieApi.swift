@@ -19,7 +19,8 @@ enum MovieApi {
 extension MovieApi: TargetType {
     
     var baseURL: URL {
-        return URL(string: "https://api.themoviedb.org/3/movie/")!
+        guard let url = URL(string: "https://api.themoviedb.org/3/movie/") else { fatalError("baseURL could not be configured") }
+        return url 
     }
     
     var path: String {

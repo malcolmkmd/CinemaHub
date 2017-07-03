@@ -22,10 +22,11 @@ class BottomMovieCell: UICollectionViewCell {
     }
     
     func updateUI(){
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie!.posterPath ?? "")")!
-        let resource = ImageResource(downloadURL: url, cacheKey: movie?.title)
+        guard let movie = movie else { fatalError("Trying to updateUI with no movie") }
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath)") else { fatalError("Could not get movie poster path")}
+        let resource = ImageResource(downloadURL: url, cacheKey: movie.title)
         posterImage.kf.setImage(with: resource, placeholder: #imageLiteral(resourceName: "placer"), options: [.transition(.fade(0.3))])
-        titleLabel.text = movie?.title
-        dateLabel.text = movie?.releaseDate
+        titleLabel.text = movie.title
+        dateLabel.text = DF.format(date: movie.releaseDate)
     }
 }

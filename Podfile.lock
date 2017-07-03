@@ -37,14 +37,14 @@ PODS:
   - YoutubeSourceParserKit (0.2.4)
 
 DEPENDENCIES:
-  - BMPlayer
-  - BonMot
-  - ChameleonFramework
+  - BMPlayer (~> 0.8.6)
+  - BonMot (~> 4.3.1)
+  - ChameleonFramework (~> 2.1.0)
   - HCSStarRatingView (~> 1.5)
   - Hero (from `https://github.com/lkzhao/Hero`)
   - Kingfisher (~> 3.0)
   - Mockingjay
-  - Moya
+  - Moya (~> 8.0.4)
   - Nimble
   - Quick
   - SnapKit (~> 3.2.0)
@@ -92,6 +92,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
   YoutubeSourceParserKit: d1506222a62718ed41f18ab52ebbc1b1d9ecabcc
 
-PODFILE CHECKSUM: a5fc3947df26933b33049d28ea9c5b7a5e00016c
+PODFILE CHECKSUM: 3f0929cd39138f082d1d893caf5ea5149aa93646
 
 COCOAPODS: 1.2.1

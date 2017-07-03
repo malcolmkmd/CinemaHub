@@ -16,6 +16,7 @@ _Concepts used:_
 - MVC-N architecture (N for network)
 - Video player
 - Image cache-ing with KingFisher
+- Swift 4 Decodable to serialize JSON
 
 
 Libraries Utilized
@@ -28,7 +29,6 @@ Libraries Utilized
 - Hero
 - BonMot
 - BMPlayer
-- SwiftyJSON ❌ (bye bye SwiftJSON, thanks to Swift4 Codable  👍🏾)
 - KingFisher
 - Snapkit
 
@@ -38,7 +38,7 @@ Libraries Utilized
 - [x] Tabs for each view in Detail movie view
 - [x] Setup Moya Provider
 - [x] Model JSON to views
-- [ ] Error Handling
+- [ ] Error Handling (replace all fatalError with toast message)
 - [ ] Unit Tests
-- [ ] Refactoring (Removie all '!' yeah we like being super safe)
+- [x] Refactoring (Removie all '!' yeah we like being super safe). There will always be room for more.
 

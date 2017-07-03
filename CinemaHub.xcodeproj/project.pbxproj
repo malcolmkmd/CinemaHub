@@ -20,6 +20,7 @@
 		9D4444E31EF8111F00A6F733 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4444E21EF8111F00A6F733 /* MainViewController.swift */; };
 		9D4444E51EF8118300A6F733 /* NavHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4444E41EF8118300A6F733 /* NavHelper.swift */; };
 		9D49B0D21F066BF600D9BD50 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D49B0D11F066BF600D9BD50 /* Helper.swift */; };
+		9D4C7E8E1F0A3CEB00BE23C0 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C7E8D1F0A3CEB00BE23C0 /* DateFormatter.swift */; };
 		9D557BCA1F0676050017A141 /* Movie.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D49B0CC1F06683900D9BD50 /* Movie.json */; };
 		9D557BCC1F067C320017A141 /* TopMovieCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D557BCB1F067C320017A141 /* TopMovieCellSpec.swift */; };
 		9D9E9CE71F029A000096989C /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E9CE51F029A000096989C /* RecommendationCell.swift */; };
@@ -74,6 +75,7 @@
 		9D49B0CC1F06683900D9BD50 /* Movie.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Movie.json; sourceTree = "<group>"; };
 		9D49B0CE1F06694500D9BD50 /* CinemaHubTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CinemaHubTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9D49B0D11F066BF600D9BD50 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		9D4C7E8D1F0A3CEB00BE23C0 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		9D557BCB1F067C320017A141 /* TopMovieCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovieCellSpec.swift; sourceTree = "<group>"; };
 		9D9E9CE51F029A000096989C /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
 		9D9E9CE61F029A000096989C /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				9D4444E41EF8118300A6F733 /* NavHelper.swift */,
+				9D4C7E8D1F0A3CEB00BE23C0 /* DateFormatter.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				9D9E9CEA1F02A2560096989C /* DetailTVC.swift in Sources */,
 				9D9E9CE71F029A000096989C /* RecommendationCell.swift in Sources */,
 				9D4444C81EF8032000A6F733 /* AppDelegate.swift in Sources */,
+				9D4C7E8E1F0A3CEB00BE23C0 /* DateFormatter.swift in Sources */,
 				9D9E9CF31F038DBA0096989C /* API.swift in Sources */,
 				9D4444E51EF8118300A6F733 /* NavHelper.swift in Sources */,
 				9DC839301EFA4BAD0096310B /* DetailViewController.swift in Sources */,

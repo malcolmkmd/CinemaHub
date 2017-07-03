@@ -33,8 +33,9 @@ class CustomTabBar: ButtonBarPagerTabStripViewController {
     }
     
     func style(){
+        guard let color = selectedColor else { fatalError("no color") }
         settings.style.selectedBarHeight = 1
-        settings.style.selectedBarBackgroundColor = selectedColor!
+        settings.style.selectedBarBackgroundColor = color
         settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarMinimumLineSpacing = 0

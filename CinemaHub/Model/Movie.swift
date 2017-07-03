@@ -25,8 +25,8 @@ struct Movie: Decodable  {
     var videoPath: String?
     let backdrop: String
     let title: String
-    let releaseDate: String
-    let rating: Double
+    var releaseDate: String
+    var rating: Double
     let overview: String
     
     private enum CodingKeys: String, CodingKey {

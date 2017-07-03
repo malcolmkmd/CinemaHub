@@ -14,12 +14,12 @@ extension MovieApi {
         return Data()
     }
     
-    func stubbedResponse(_ filename: String) -> Data! {
+    func stubbedResponse(_ filename: String) -> Data? {
         @objc class TestClass: NSObject { }
         
         let bundle = Bundle(for: TestClass.self)
-        let path = bundle.path(forResource: filename, ofType: "json")
-        return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
+        guard let path = bundle.path(forResource: filename, ofType: "json") else { fatalError("path could not be found") }
+        return (try? Data(contentsOf: URL(fileURLWithPath: path)))
     }
 
 }

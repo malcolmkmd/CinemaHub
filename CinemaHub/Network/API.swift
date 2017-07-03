@@ -13,7 +13,7 @@ import YoutubeSourceParserKit
 class API {
     
     static let apiKey = "7a312711d0d45c9da658b9206f3851dd"
-    static let provider = MoyaProvider<MovieApi>(plugins: [NetworkLoggerPlugin(verbose: true)]) 
+    static let provider = MoyaProvider<MovieApi>()
     
     static func getNewMovies(page: Int, completion: @escaping ([Movie])->()){
         provider.request(.newMovies(page: page)) { result in

@@ -23,14 +23,13 @@ class TopMovieCell: UICollectionViewCell {
         }
     }
     
-    func updateUI(){
-        
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie!.posterPath)")!
-        let resource = ImageResource(downloadURL: url, cacheKey: movie?.title)
+   private  func updateUI(){
+        guard let movie = movie else { fatalError("Trying to updateUI with no movie") }
+        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath)")!
+        let resource = ImageResource(downloadURL: url, cacheKey: movie.title)
         posterImage.kf.setImage(with: resource, placeholder: #imageLiteral(resourceName: "placer"), options: [.transition(.fade(0.3))])
-        titleLabel.text = movie?.title
-        
-        ratingView.value = CGFloat((movie?.rating)!)
-        dateLabel.text = movie?.releaseDate
+        titleLabel.text = movie.title
+        ratingView.value = CGFloat((movie.rating/2))
+        dateLabel.text = DF.format(date: movie.releaseDate)
     }
 }

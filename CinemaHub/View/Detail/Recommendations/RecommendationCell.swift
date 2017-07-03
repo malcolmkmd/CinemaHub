@@ -14,7 +14,7 @@ class RecommendationCell: UITableViewCell {
     @IBOutlet weak var posterImg: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     
-    var movie: Movie? {
+    var movie: Movie! {
         didSet {
             self.updateUI()
         }
@@ -28,9 +28,9 @@ class RecommendationCell: UITableViewCell {
     
     
     func updateUI(){
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie!.posterPath)")!
-        let resource = ImageResource(downloadURL: url, cacheKey: movie?.title)
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath)") else { fatalError("could not get recommendation poster") }
+        let resource = ImageResource(downloadURL: url, cacheKey: movie.title)
         posterImg.kf.setImage(with: resource, placeholder: #imageLiteral(resourceName: "placer"), options: [.transition(.fade(0.3))])
-        nameLbl.text = movie?.title
+        nameLbl.text = movie.title
     }
 }

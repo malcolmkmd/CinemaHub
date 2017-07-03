@@ -1,19 +1,19 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 inhibit_all_warnings!
 target 'CinemaHub' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for CinemaHub
-  pod 'ChameleonFramework'
-  pod 'BonMot'
+  pod 'ChameleonFramework', '~> 2.1.0'
+  pod 'BonMot', '~> 4.3.1'
   pod 'Hero' , :git => 'https://github.com/lkzhao/Hero'
   pod 'SwiftIcons', :git => 'https://github.com/ranesr/SwiftIcons'
   pod 'HCSStarRatingView', '~> 1.5'
   pod 'XLPagerTabStrip', '~> 7.0'
-  pod 'BMPlayer'
-  pod 'Moya'
+  pod 'BMPlayer', '~> 0.8.6'
+  pod 'Moya', '~> 8.0.4'
   pod 'SnapKit', '~> 3.2.0'
   pod 'YoutubeSourceParserKit' , :git => 'https://github.com/lennet/YoutubeSourceParserKit', :branch => 'master'
   pod 'Kingfisher', '~> 3.0'

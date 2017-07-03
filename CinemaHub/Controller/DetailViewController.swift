@@ -18,7 +18,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var releaseLabel: UILabel!
     @IBOutlet weak var rating: HCSStarRatingView!
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     let detailTabs = CustomTabBar()
     
@@ -27,64 +26,52 @@ class DetailViewController: UIViewController {
             self.updateUI()
         }
     }
+    
     var player: BMPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        API.getVideo(forMovieWith: (movie.id)!){ url in
-            self.movie?.videoPath = url
-            self.setupPlayer()
-            
-        }
-        
         // Setup video player configurations
         BMPlayerConf.shouldAutoPlay = false
         BMPlayerConf.topBarShowInCase = .always
         
+        setupPlayer()
+        
+        API.getVideo(forMovieWith: movie.id){ url in
+            guard let url = url else { fatalError("Could not get video url") }
+            guard let video = URL(string: url), let cover = URL(string: "https://image.tmdb.org/t/p/w500\(self.movie.backdrop)") else {return}
+            self.addVideo(videoURL: video, coverURL: cover)
+        }
+        
         detailTabs.view.frame = tabbarPagerView.bounds
         tabbarPagerView.addSubview(detailTabs.view)
         titleLabel.text = movie.title
-        releaseLabel.text = "Release: \(movie.releaseDate)"
-        rating.value = CGFloat((movie.rating))
+        releaseLabel.text = "Release: \(DF.format(date: movie.releaseDate))"
+        rating.value = CGFloat((movie.rating/2))
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-          self.spinner.startAnimating()
-    }
-    
+        
     func setupPlayer(){
-        guard let videoPath = movie.videoPath else {return}
-        guard let videoURL = URL(string: videoPath), let cover = URL(string: "https://image.tmdb.org/t/p/w500\(movie.backdrop)") else {return}
-        let video = BMPlayerResource(url: videoURL, name: movie.title, cover: cover, subtitle: nil)
-        let customController = BMPlayerCustomControlView()
-        
         player = BMPlayer(customControlView: BMPlayerCustomControlView())
-        player.setVideo(resource: video)
-        
-        
         player.backBlock = { _ in
             self.navigationController?.popViewController(animated: true)
         }
         
-        
-        DispatchQueue.main.async {
-            self.videoView.addSubview(self.player)
-            self.spinner.stopAnimating()
-            self.player.snp.makeConstraints { make in
-                make.top.equalTo(self.videoView)
-                make.left.right.equalTo(self.videoView)
-                make.height.equalTo(self.videoView.frame.height)
-            }
+        self.videoView.addSubview(self.player)
+        self.player.snp.makeConstraints { make in
+            make.top.equalTo(self.videoView)
+            make.left.right.equalTo(self.videoView)
+            make.height.equalTo(self.videoView.frame.height)
         }
     }
     
+    func addVideo(videoURL: URL, coverURL: URL){
+        let video = BMPlayerResource(url: videoURL, name: movie.title, cover: coverURL)
+        player.setVideo(resource: video)
+    }
+    
     func updateUI(){
-        detailTabs.overview = movie?.overview
-        detailTabs.movieID = movie?.id
+        detailTabs.overview = movie.overview
+        detailTabs.movieID = movie.id
         detailTabs.pushDelegate = self
     }
     

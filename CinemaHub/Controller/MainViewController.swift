@@ -139,20 +139,21 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == topCVC {
-            let cell = topCVC.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath) as? TopMovieCell
-            cell?.movie = topRatedMovies[indexPath.row]
-            return cell!
-        }else if collectionView == bottomCVC {
-            let cell = bottomCVC.dequeueReusableCell(withReuseIdentifier: "bottomCell", for: indexPath) as? BottomMovieCell
-            if isSearching {
-                cell?.movie = filteredMovies[indexPath.row]
-            }else {
-                cell?.movie = currentMovies[indexPath.row]
+            if let cell = topCVC.dequeueReusableCell(withReuseIdentifier: "topCell", for: indexPath) as? TopMovieCell {
+                cell.movie = topRatedMovies[indexPath.row]
+                return cell
             }
-            return cell!
-        }else{
-            return UICollectionViewCell()
+        }else if collectionView == bottomCVC {
+            if let cell = bottomCVC.dequeueReusableCell(withReuseIdentifier: "bottomCell", for: indexPath) as? BottomMovieCell {
+                if isSearching {
+                    cell.movie = filteredMovies[indexPath.row]
+                }else {
+                    cell.movie = currentMovies[indexPath.row]
+                }
+                return cell
+            }
         }
+        return UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -179,7 +180,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
                 detailVC.movie = topRatedMovies[indexPath.row]
                 self.navigationController?.pushViewController(detailVC, animated: true)
-                
             }
         }else if collectionView == bottomCVC {
             if let detailVC = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
@@ -217,10 +217,9 @@ extension MainViewController: UITextFieldDelegate, UISearchBarDelegate {
             view.resignFirstResponder()
         }else {
             isSearching = true
-            let query = textField.text?.trimmingCharacters(in: .whitespaces)
-            filteredMovies = currentMovies.filter { $0.title.localizedCaseInsensitiveContains(query!) }
+            guard let query = textField.text?.trimmingCharacters(in: .whitespaces) else { fatalError("no query string")}
+            filteredMovies = currentMovies.filter { $0.title.localizedCaseInsensitiveContains(query) }
             bottomCVC.reloadData()
-            
         }
         
         self.resignFirstResponder()
