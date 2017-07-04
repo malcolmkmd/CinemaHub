@@ -25,7 +25,7 @@ Configuration.swift
 *.ipa
 *.dSYM.zip
 *.dSYM
-
+Configuration.swift
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
