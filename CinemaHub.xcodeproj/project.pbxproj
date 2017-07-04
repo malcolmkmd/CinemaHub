@@ -39,6 +39,7 @@
 		9DC839301EFA4BAD0096310B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8392F1EFA4BAD0096310B /* DetailViewController.swift */; };
 		9DC839321EFA4BC10096310B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC839311EFA4BC10096310B /* Movie.swift */; };
 		9DC839341EFA73350096310B /* preview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DC839331EFA73350096310B /* preview.jpg */; };
+		9DCBE2251F0BDC4F00B2E182 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBE2241F0BDC4F00B2E182 /* Configuration.swift */; };
 		9DEA1F781F0BA3B200AE8F6B /* RecommendationsTVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA1F771F0BA3B200AE8F6B /* RecommendationsTVCSpec.swift */; };
 		9DFC4F321F06491900FFB907 /* BMPlayerCustomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC4F311F06491900FFB907 /* BMPlayerCustomControlView.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		9DC8392F1EFA4BAD0096310B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9DC839311EFA4BC10096310B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9DC839331EFA73350096310B /* preview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview.jpg; sourceTree = "<group>"; };
+		9DCBE2241F0BDC4F00B2E182 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		9DEA1F771F0BA3B200AE8F6B /* RecommendationsTVCSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsTVCSpec.swift; sourceTree = "<group>"; };
 		9DFC4F311F06491900FFB907 /* BMPlayerCustomControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMPlayerCustomControlView.swift; sourceTree = "<group>"; };
 		9DFC4F371F0652E000FFB907 /* CinemaHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CinemaHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				9D4444C71EF8032000A6F733 /* AppDelegate.swift */,
+				9DCBE2241F0BDC4F00B2E182 /* Configuration.swift */,
 				9D4444D31EF8032000A6F733 /* Info.plist */,
 			);
 			path = Supporting;
@@ -581,6 +584,7 @@
 				9D4444E51EF8118300A6F733 /* NavHelper.swift in Sources */,
 				9DC839301EFA4BAD0096310B /* DetailViewController.swift in Sources */,
 				9D9E9CED1F02A2680096989C /* DescriptionCell.swift in Sources */,
+				9DCBE2251F0BDC4F00B2E182 /* Configuration.swift in Sources */,
 				9D4444E31EF8111F00A6F733 /* MainViewController.swift in Sources */,
 				9DC64AA11F0528250039487D /* MockApi.swift in Sources */,
 				9D1A57211EF95A2A00995A6D /* BottomMovieCell.swift in Sources */,
