@@ -14,7 +14,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-
+Configuration.swift 
 ## Other
 *.moved-aside
 *.xccheckout

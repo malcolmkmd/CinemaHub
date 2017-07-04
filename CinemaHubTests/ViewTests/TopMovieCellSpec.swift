@@ -28,10 +28,11 @@ class TopMovieCellSpec : QuickSpec {
     func testOutlets(view sut:TopMovieCell){
         describe("test all outlets are connected") {
             beforeEach {
-                sut.awakeFromNib()
+                sut.movie = Helper.getMovie()
             }
             
             it("should have no nil outlets"){
+                sut.movie = Helper.getMovie()
                 expect(sut.posterImage).toNot(beNil())
                 expect(sut.titleLabel).toNot(beNil())
                 expect(sut.dateLabel).toNot(beNil())
@@ -43,8 +44,7 @@ class TopMovieCellSpec : QuickSpec {
     func test_updateUI(view sut: TopMovieCell){
         describe("test UI update"){
             beforeEach {
-                guard let json = Helper.getJSON(file: "Movie") else { fatalError("could not serialize json file") }
-                sut.movie = Movie(fromJson: json)
+                sut.movie = Helper.getMovie()
             }
             
             it("should set movie details"){

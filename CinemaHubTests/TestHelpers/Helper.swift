@@ -2,21 +2,38 @@
 //  Helper.swift
 //  CinemaHubTests
 //
-//  Created by Malcolm Kumwenda on 2017/06/30.
+//  Created by Malcolm Kumwenda on 2017/07/03.
 //  Copyright © 2017 Byte Orbit. All rights reserved.
 //
 
 import Foundation
-import SwiftyJSON
+@testable import CinemaHub
 
 class Helper {
-    static func getJSON(file: String)->JSON? {
-        if let path = Bundle(for: self).path(forResource: file, ofType: "json") {
-            if let jsonData = NSData(contentsOfFile: path) {
-                return JSON(data: jsonData as Data)
+    
+    static func getMovies() -> [Movie]?{
+        if let path = Bundle(for: self).url(forResource: "Movies", withExtension: "json") {
+            do {
+                let jsonData = try Data(contentsOf: path)
+                let results = try JSONDecoder().decode(APIResults.self, from: jsonData)
+                return results.movies
+            }catch let err {
+                print(err)
             }
         }
-        
+        return nil
+    }
+    
+    static func getMovie() -> Movie?{
+        if let path = Bundle(for: self).url(forResource: "Movies", withExtension: "json") {
+            do {
+                let jsonData = try Data(contentsOf: path)
+                let results = try JSONDecoder().decode(APIResults.self, from: jsonData)
+                return results.movies[0]
+            }catch let err {
+                print(err)
+            }
+        }
         return nil
     }
 }

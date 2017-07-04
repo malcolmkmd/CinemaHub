@@ -47,7 +47,7 @@ class DetailViewController: UIViewController {
         tabbarPagerView.addSubview(detailTabs.view)
         titleLabel.text = movie.title
         releaseLabel.text = "Release: \(DF.format(date: movie.releaseDate))"
-        rating.value = CGFloat((movie.rating/2))
+        rating.value = CGFloat((movie.rating))/2
     }
         
     func setupPlayer(){
