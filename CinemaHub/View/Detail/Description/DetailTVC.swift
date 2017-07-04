@@ -11,7 +11,7 @@ import XLPagerTabStrip
 
 class DetailTVC: UITableViewController {
     
-    var overview: String!
+    var overview: String?
   
     
     override func viewDidLoad() {
@@ -23,8 +23,6 @@ class DetailTVC: UITableViewController {
         tableView.estimatedRowHeight = 80
         tableView.allowsSelection = false 
     }
-    
-    
     
     // MARK: - Table view data source
 

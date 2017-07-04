@@ -17,8 +17,8 @@ class CustomTabBar: ButtonBarPagerTabStripViewController {
     let tabTwo = RecomendationsTVC()
     var pushDelegate: PushDelegate?
     
-    var overview: String!
-    var movieID: Int!
+    var overview: String?
+    var movieID: Int?
     
     override func viewDidLoad() {
         style()

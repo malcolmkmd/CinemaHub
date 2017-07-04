@@ -14,6 +14,7 @@
 		9D1A571E1EF95A1400995A6D /* TopMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D1A571C1EF95A1400995A6D /* TopMovieCell.xib */; };
 		9D1A57211EF95A2A00995A6D /* BottomMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A571F1EF95A2A00995A6D /* BottomMovieCell.swift */; };
 		9D1A57221EF95A2A00995A6D /* BottomMovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D1A57201EF95A2A00995A6D /* BottomMovieCell.xib */; };
+		9D41A35F1F0BD26300D4C83F /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D49B0CC1F06683900D9BD50 /* Movies.json */; };
 		9D4444C81EF8032000A6F733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4444C71EF8032000A6F733 /* AppDelegate.swift */; };
 		9D4444CD1EF8032000A6F733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D4444CB1EF8032000A6F733 /* Main.storyboard */; };
 		9D4444CF1EF8032000A6F733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4444CE1EF8032000A6F733 /* Assets.xcassets */; };
@@ -21,9 +22,7 @@
 		9D4444E31EF8111F00A6F733 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4444E21EF8111F00A6F733 /* MainViewController.swift */; };
 		9D4444E51EF8118300A6F733 /* NavHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4444E41EF8118300A6F733 /* NavHelper.swift */; };
 		9D4C7E8E1F0A3CEB00BE23C0 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4C7E8D1F0A3CEB00BE23C0 /* DateFormatter.swift */; };
-		9D557BCA1F0676050017A141 /* Movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 9D49B0CC1F06683900D9BD50 /* Movies.json */; };
 		9D557BCC1F067C320017A141 /* TopMovieCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D557BCB1F067C320017A141 /* TopMovieCellSpec.swift */; };
-		9D691BF81F0A5881003ADE27 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D691BF71F0A5881003ADE27 /* Helper.swift */; };
 		9D9E9CE71F029A000096989C /* RecommendationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E9CE51F029A000096989C /* RecommendationCell.swift */; };
 		9D9E9CE81F029A000096989C /* RecommendationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D9E9CE61F029A000096989C /* RecommendationCell.xib */; };
 		9D9E9CEA1F02A2560096989C /* DetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E9CE91F02A2560096989C /* DetailTVC.swift */; };
@@ -41,6 +40,7 @@
 		9DC839301EFA4BAD0096310B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC8392F1EFA4BAD0096310B /* DetailViewController.swift */; };
 		9DC839321EFA4BC10096310B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC839311EFA4BC10096310B /* Movie.swift */; };
 		9DC839341EFA73350096310B /* preview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9DC839331EFA73350096310B /* preview.jpg */; };
+		9DEA1F781F0BA3B200AE8F6B /* RecommendationsTVCSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA1F771F0BA3B200AE8F6B /* RecommendationsTVCSpec.swift */; };
 		9DFC4F321F06491900FFB907 /* BMPlayerCustomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFC4F311F06491900FFB907 /* BMPlayerCustomControlView.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +77,6 @@
 		9D49B0CE1F06694500D9BD50 /* CinemaHubTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CinemaHubTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9D4C7E8D1F0A3CEB00BE23C0 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		9D557BCB1F067C320017A141 /* TopMovieCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMovieCellSpec.swift; sourceTree = "<group>"; };
-		9D691BF71F0A5881003ADE27 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		9D9E9CE51F029A000096989C /* RecommendationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationCell.swift; sourceTree = "<group>"; };
 		9D9E9CE61F029A000096989C /* RecommendationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationCell.xib; sourceTree = "<group>"; };
 		9D9E9CE91F02A2560096989C /* DetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTVC.swift; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		9DC8392F1EFA4BAD0096310B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9DC839311EFA4BC10096310B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		9DC839331EFA73350096310B /* preview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview.jpg; sourceTree = "<group>"; };
+		9DEA1F771F0BA3B200AE8F6B /* RecommendationsTVCSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsTVCSpec.swift; sourceTree = "<group>"; };
 		9DFC4F311F06491900FFB907 /* BMPlayerCustomControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMPlayerCustomControlView.swift; sourceTree = "<group>"; };
 		9DFC4F371F0652E000FFB907 /* CinemaHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CinemaHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DFC4F3B1F0652E000FFB907 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -240,20 +240,13 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
-		9D691BF61F0A5855003ADE27 /* TestHelpers */ = {
-			isa = PBXGroup;
-			children = (
-				9D691BF71F0A5881003ADE27 /* Helper.swift */,
-			);
-			path = TestHelpers;
-			sourceTree = "<group>";
-		};
 		9D9E9CEF1F0386720096989C /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				9D9E9CF21F038DBA0096989C /* API.swift */,
 				9D9E9CF01F03868B0096989C /* MovieApi.swift */,
 				9DC64AA01F0528250039487D /* MockApi.swift */,
+				9D49B0CB1F0667E800D9BD50 /* Stubs */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -294,6 +287,7 @@
 			children = (
 				9DBBDA4F1F0685700060BE99 /* CustomTabBarSpec.swift */,
 				9DBBDA511F068B9B0060BE99 /* DescriptionTests */,
+				9DEA1F761F0BA38C00AE8F6B /* Recommendations */,
 			);
 			path = DetailTests;
 			sourceTree = "<group>";
@@ -306,6 +300,14 @@
 			path = DescriptionTests;
 			sourceTree = "<group>";
 		};
+		9DEA1F761F0BA38C00AE8F6B /* Recommendations */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA1F771F0BA3B200AE8F6B /* RecommendationsTVCSpec.swift */,
+			);
+			path = Recommendations;
+			sourceTree = "<group>";
+		};
 		9DFC4F381F0652E000FFB907 /* CinemaHubTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,8 +316,6 @@
 				9DFC4F431F06548200FFB907 /* ControllerTests */,
 				9DFC4F451F06549A00FFB907 /* NetworkTests */,
 				9DFC4F441F06549100FFB907 /* HelpersTests */,
-				9D49B0CB1F0667E800D9BD50 /* Stubs */,
-				9D691BF61F0A5855003ADE27 /* TestHelpers */,
 				9DFC4F3B1F0652E000FFB907 /* Info.plist */,
 			);
 			path = CinemaHubTests;
@@ -454,6 +454,7 @@
 			files = (
 				9D9E9CE81F029A000096989C /* RecommendationCell.xib in Resources */,
 				9D1A571E1EF95A1400995A6D /* TopMovieCell.xib in Resources */,
+				9D41A35F1F0BD26300D4C83F /* Movies.json in Resources */,
 				9D1A57221EF95A2A00995A6D /* BottomMovieCell.xib in Resources */,
 				9DC839341EFA73350096310B /* preview.jpg in Resources */,
 				9D9E9CEE1F02A2680096989C /* DescriptionCell.xib in Resources */,
@@ -468,7 +469,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D557BCA1F0676050017A141 /* Movies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,8 +598,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DBBDA4D1F0684BD0060BE99 /* BottomMovieCellSpec.swift in Sources */,
+				9DEA1F781F0BA3B200AE8F6B /* RecommendationsTVCSpec.swift in Sources */,
 				9DBBDA531F068BB90060BE99 /* DetailTVCSpec.swift in Sources */,
-				9D691BF81F0A5881003ADE27 /* Helper.swift in Sources */,
 				9D557BCC1F067C320017A141 /* TopMovieCellSpec.swift in Sources */,
 				9DBBDA501F0685700060BE99 /* CustomTabBarSpec.swift in Sources */,
 			);
@@ -755,7 +755,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byteorbit.malcolm.CinemaHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -772,7 +772,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byteorbit.malcolm.CinemaHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -791,7 +791,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CinemaHubTests/CinemaHubTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CinemaHub.app/CinemaHub";
@@ -810,7 +810,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.byteorbit.malcolm.CinemaHubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CinemaHubTests/CinemaHubTests-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CinemaHub.app/CinemaHub";

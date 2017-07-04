@@ -22,8 +22,7 @@ class BottomMovieCell: UICollectionViewCell {
     }
     
     func updateUI(){
-        guard let movie = movie else { return }
-        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath)") else { fatalError("Could not get movie poster path")}
+        guard let movie = movie, let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath)") else { return }
         let resource = ImageResource(downloadURL: url, cacheKey: movie.title)
         posterImage.kf.setImage(with: resource, placeholder: #imageLiteral(resourceName: "placer"), options: [.transition(.fade(0.3))])
         titleLabel.text = movie.title

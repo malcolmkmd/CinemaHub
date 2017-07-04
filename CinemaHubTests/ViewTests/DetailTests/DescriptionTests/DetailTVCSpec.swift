@@ -16,19 +16,20 @@ import XLPagerTabStrip
 class DetailTVCSpec : QuickSpec {
     override func spec() {
         super.spec()
+        
+        // setup
         let sut = DetailTVC()
         sut.overview = "the overview"
-        test_viewDidLoad(view: sut)
-        test_tableViewDelegates(view: sut)
-        test_indicatorInfo(view: sut)
+        sut.viewDidLoad()
+        
+        test_viewDidLoad(sut)
+        test_tableViewDelegates(sut)
+        test_indicatorInfo(sut)
+        test_descriptionCell(sut)
     }
     
-    func test_viewDidLoad(view sut: DetailTVC){
+    func test_viewDidLoad(_ sut: DetailTVC){
         describe("test viewDidLoad") {
-            beforeEach {
-                sut.viewDidLoad()
-            }
-            
             it("should init the tableView"){
                 expect(sut.tableView.separatorStyle).to(equal(UITableViewCellSeparatorStyle.none))
                 expect(sut.tableView.bounces).to(beFalse())
@@ -39,11 +40,8 @@ class DetailTVCSpec : QuickSpec {
         }
     }
     
-    func test_tableViewDelegates(view sut: DetailTVC){
+    func test_tableViewDelegates(_ sut: DetailTVC){
         describe("it should set all delegate methods"){
-            beforeEach {
-                sut.viewDidLoad()
-            }
             
             it("should set numberOfSections"){
                 expect(sut.numberOfSections(in: sut.tableView)).to(equal(1))
@@ -67,10 +65,20 @@ class DetailTVCSpec : QuickSpec {
         }
     }
     
-    func test_indicatorInfo(view sut: DetailTVC){
+    func test_indicatorInfo(_ sut: DetailTVC){
         describe("test indicatorInfo"){
             let info = sut.indicatorInfo(for: PagerTabStripViewController())
             expect(info.title).to(equal("Description"))
+        }
+    }
+    
+    func test_descriptionCell(_ view: DetailTVC){
+        describe("test descriptionCell"){
+            it("should set overlabel view text"){
+                if let cell = view.tableView(view.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? DescriptionCell {
+                    expect(cell.overviewLabel.text).to(equal(view.overview))
+                }
+            }
         }
     }
 }

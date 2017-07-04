@@ -11,14 +11,14 @@ import Foundation
 
 extension MovieApi {
     var sampleData: Data {
-        return Data()
+        switch self {
+        case .reco, .topRated, .newMovies, .video:
+            return stubbedResponse("Movies")
+        }
     }
     
-    func stubbedResponse(_ filename: String) -> Data? {
-        @objc class TestClass: NSObject { }
-        
-        let bundle = Bundle(for: TestClass.self)
-        guard let path = bundle.path(forResource: filename, ofType: "json") else { fatalError("path could not be found") }
+    func stubbedResponse(_ filename: String) -> Data! {
+        guard let path = Bundle.main.path(forResource: filename, ofType: "json") else { fatalError("path could not be found") }
         return (try? Data(contentsOf: URL(fileURLWithPath: path)))
     }
 
