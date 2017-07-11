@@ -14,16 +14,18 @@ class API {
     
     static let apiKey = movieAPIkey
     //1. Testing
-    static let provider = MoyaProvider<MovieApi>(stubClosure: MoyaProvider.immediatelyStub)
+//    static let provider = MoyaProvider<MovieApi>(stubClosure: MoyaProvider.immediatelyStub)
     
     //2. Debug
-//    static let provider = MoyaProvider<MovieApi>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    static let provider = MoyaProvider<MovieApi>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
     // 3. Production
 //    static let provider = MoyaProvider<MovieApi>()
     
     static func getNewMovies(page: Int, completion: @escaping ([Movie])->()){
+        
         provider.request(.newMovies(page: page)) { result in
+            
             switch result {
             case let .success(response):
                 do {
