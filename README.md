@@ -5,6 +5,11 @@
 
 design by: dsamivai@gmail.com on upLabs, src: https://ios.uplabs.com/posts/exploration-cinehub-app-ui
 
+Medium Article
+---------------------------------------
+https://medium.com/@malcolmcollin/movie-app-swift-4-part-one-e6e03a993600
+
+
 _Concepts used:_
 - MOYA REST JSON API 
 - Dynamic collectionView (swicthing from horizontal to vertical on the fly)

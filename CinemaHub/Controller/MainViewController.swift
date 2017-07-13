@@ -11,11 +11,7 @@ import Hero
 import SwiftIcons
 import Moya
 
-enum Showing {
-    case opened
-    case closed
-    
-}
+
 
 class MainViewController: UIViewController {
     
@@ -41,6 +37,11 @@ class MainViewController: UIViewController {
     var currentMovies: [Movie]!
     var topRatedMovies: [Movie]!
     var filteredMovies = [Movie]()
+    
+    enum Showing {
+        case opened
+        case closed
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

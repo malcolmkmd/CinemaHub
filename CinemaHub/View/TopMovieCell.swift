@@ -32,3 +32,17 @@ class TopMovieCell: UICollectionViewCell {
         dateLabel.text = DF.format(date: movie.releaseDate)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
