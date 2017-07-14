@@ -1,7 +1,7 @@
 # CinemaHub
 ------------------------------------------------------
 
-<img src="https://cdn-images-1.medium.com/max/800/1*3NVJ6bVhuz4vvILJ-LOt0g.gif" width="525"/>
+<img src="CinemaHub/Resources/preview.gif" width="525"/>
 
 design by: dsamivai@gmail.com on upLabs, src: https://ios.uplabs.com/posts/exploration-cinehub-app-ui
 
